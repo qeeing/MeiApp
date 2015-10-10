@@ -2,12 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -16,29 +17,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyl-hg-V2R">
-                                <rect key="frame" x="58" y="489" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plm-F7-KqU">
-                                <rect key="frame" x="206" y="489" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ezK-XK-dK5">
-                                <rect key="frame" x="40" y="67" width="240" height="390"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEW-Tc-AVh">
+                                <rect key="frame" x="0.0" y="514" width="320" height="54"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyl-hg-V2R">
+                                        <rect key="frame" x="17" y="7" width="137" height="39"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="登录">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xmq-kQ-iq4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plm-F7-KqU">
+                                        <rect key="frame" x="167" y="7" width="138" height="39"/>
+                                        <color key="backgroundColor" red="0.92549026010000002" green="0.61568629740000003" blue="0.37647062539999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <state key="normal" title="注册">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="iY7-hv-pnd" kind="show" id="LKt-GG-gjz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="plm-F7-KqU" firstAttribute="leading" secondItem="lyl-hg-V2R" secondAttribute="trailing" constant="13" id="AMm-a2-Hgv"/>
+                                    <constraint firstAttribute="trailing" secondItem="plm-F7-KqU" secondAttribute="trailing" constant="15" id="CYO-Zh-555"/>
+                                    <constraint firstItem="plm-F7-KqU" firstAttribute="top" secondItem="eEW-Tc-AVh" secondAttribute="top" constant="7" id="GyM-Wo-0fE"/>
+                                    <constraint firstItem="lyl-hg-V2R" firstAttribute="top" secondItem="eEW-Tc-AVh" secondAttribute="top" constant="7" id="QgO-xE-z7X"/>
+                                    <constraint firstItem="plm-F7-KqU" firstAttribute="width" secondItem="lyl-hg-V2R" secondAttribute="width" constant="1" id="XnS-ru-QHa"/>
+                                    <constraint firstItem="lyl-hg-V2R" firstAttribute="leading" secondItem="eEW-Tc-AVh" secondAttribute="leading" constant="17" id="bcH-D9-Wjk"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="plm-F7-KqU" secondAttribute="trailing" constant="14" id="fwd-Gy-RVl"/>
+                                    <constraint firstItem="plm-F7-KqU" firstAttribute="height" secondItem="lyl-hg-V2R" secondAttribute="height" id="iSA-JV-1lG"/>
+                                    <constraint firstAttribute="height" constant="54" id="nVu-Y3-MdN"/>
+                                    <constraint firstAttribute="bottom" secondItem="lyl-hg-V2R" secondAttribute="bottom" constant="8" id="rjK-EZ-7r7"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ezK-XK-dK5">
+                                <rect key="frame" x="40" y="59" width="240" height="406"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ezK-XK-dK5" secondAttribute="trailing" constant="24" id="3jX-tc-Cc9"/>
+                            <constraint firstItem="eEW-Tc-AVh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="FoJ-AG-NPM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ezK-XK-dK5" secondAttribute="trailing" constant="24" id="IyO-4V-aHy"/>
+                            <constraint firstItem="eEW-Tc-AVh" firstAttribute="top" secondItem="ezK-XK-dK5" secondAttribute="bottom" constant="49" id="P65-UX-HXm"/>
+                            <constraint firstItem="ezK-XK-dK5" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="39" id="S5Y-ln-yvU"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="eEW-Tc-AVh" secondAttribute="bottom" id="Tp0-37-KYK"/>
+                            <constraint firstItem="ezK-XK-dK5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="24" id="b6I-xb-xQZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eEW-Tc-AVh" secondAttribute="trailing" constant="-16" id="wgU-6S-81g"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61" y="311"/>
+            <point key="canvasLocation" x="-255" y="317"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Y8f-E8-KFA">
+            <objects>
+                <viewController id="iY7-hv-pnd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xoD-Xr-VPS"/>
+                        <viewControllerLayoutGuide type="bottom" id="t5J-Wc-ymi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h5f-TO-j8f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sM5-sg-9I1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127" y="317"/>
         </scene>
     </scenes>
 </document>
