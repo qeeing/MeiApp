@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0E1355FB1308A7CB31CAF711 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE0DEA99D2BFCB1014FCAB3 /* libPods.a */; };
-		2D9125BC1BC8F1B5001C9979 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9125BB1BC8F1B5001C9979 /* MainViewController.m */; };
 		BC6A8E931BC82E9F00B1297D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6A8E921BC82E9F00B1297D /* Login.storyboard */; };
 		BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A8E951BC8325900B1297D /* LoginViewController.m */; };
 		BCC599B41BC40AB80004E1A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC599B31BC40AB80004E1A7 /* main.m */; };
@@ -32,8 +31,6 @@
 
 /* Begin PBXFileReference section */
 		0AE0DEA99D2BFCB1014FCAB3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D9125BA1BC8F1B5001C9979 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		2D9125BB1BC8F1B5001C9979 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		2E5C696BC31503D56A4AD969 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		61E18CD07F0564216E423715 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC6A8E921BC82E9F00B1297D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -118,8 +115,6 @@
 				BCC599B81BC40AB80004E1A7 /* ViewController.h */,
 				BCC599B91BC40AB80004E1A7 /* ViewController.m */,
 				BCC599BB1BC40AB80004E1A7 /* Main.storyboard */,
-				2D9125BA1BC8F1B5001C9979 /* MainViewController.h */,
-				2D9125BB1BC8F1B5001C9979 /* MainViewController.m */,
 				BC6A8E921BC82E9F00B1297D /* Login.storyboard */,
 				BC6A8E941BC8325900B1297D /* LoginViewController.h */,
 				BC6A8E951BC8325900B1297D /* LoginViewController.m */,
@@ -295,7 +290,6 @@
 				BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */,
 				BCC599BA1BC40AB80004E1A7 /* ViewController.m in Sources */,
 				BCC599B71BC40AB80004E1A7 /* AppDelegate.m in Sources */,
-				2D9125BC1BC8F1B5001C9979 /* MainViewController.m in Sources */,
 				BCC599B41BC40AB80004E1A7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
