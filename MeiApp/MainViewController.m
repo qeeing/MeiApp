@@ -23,6 +23,14 @@
     //加载指定的ViewController
     [self presentViewController:vc animated:YES completion:nil];
 }
+- (IBAction)registerSucceed:(id)sender {
+    //生成storyboard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    //通过Identifier找到storyboard中的某个ViewController
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"LoginSB"];
+    //加载指定的ViewController
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
