@@ -64,6 +64,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ezK-XK-dK5" secondAttribute="trailing" constant="24" id="3jX-tc-Cc9"/>
+                            <constraint firstItem="ezK-XK-dK5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="50" id="4er-w6-6HB"/>
                             <constraint firstItem="eEW-Tc-AVh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="FoJ-AG-NPM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ezK-XK-dK5" secondAttribute="trailing" constant="24" id="IyO-4V-aHy"/>
                             <constraint firstItem="eEW-Tc-AVh" firstAttribute="top" secondItem="ezK-XK-dK5" secondAttribute="bottom" constant="27" id="P65-UX-HXm"/>
@@ -72,6 +73,12 @@
                             <constraint firstItem="ezK-XK-dK5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="24" id="b6I-xb-xQZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eEW-Tc-AVh" secondAttribute="trailing" constant="-16" id="wgU-6S-81g"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IyO-4V-aHy"/>
+                                <exclude reference="S5Y-ln-yvU"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ndd-y8-xmg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
