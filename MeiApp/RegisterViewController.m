@@ -6,35 +6,42 @@
 //  Copyright (c) 2015年 QianLei. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "RegisterViewController.h"
 
-@interface MainViewController ()
+@interface RegisterViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation RegisterViewController
+
+#pragma mark - life cycle
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    //导航首页不显示navigationBar
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    //导航次页开始显示navigationBar
+    self.navigationController.navigationBar.hidden = NO;
+}
+
+#pragma mark - IBAction
 
 //登录按钮，跳转到Login.storyboard登录界面
 - (IBAction)loginAction:(id)sender {
     //生成storyboard
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     //通过Identifier找到storyboard中的某个ViewController
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"LoginSB"];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"LoginVCId"];
     //加载指定的ViewController
-    [self presentViewController:vc animated:YES completion:nil];
-}
-- (IBAction)registerSucceed:(id)sender {
-    //生成storyboard
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-    //通过Identifier找到storyboard中的某个ViewController
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"LoginSB"];
-    //加载指定的ViewController
-    [self presentViewController:vc animated:YES completion:nil];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
