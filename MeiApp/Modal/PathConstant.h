@@ -51,7 +51,7 @@ static inline NSString *PublicPreferencesPath()
 //用户偏好设置、数据库等目录
 static inline NSString *UserPreferencesPath()
 {
-    NSString *jid = [UserInfo shareInstance].userId;
+    NSString *userId = [UserInfo shareInstance].userId;
     if (IsStrEmpty(userId)) {
         return @"";
     }
