@@ -67,11 +67,11 @@
 		BCBBB75E1BC999C900A83B89 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		BCBBB75F1BC999C900A83B89 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		BCBBB7611BC99A0A00A83B89 /* PathConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathConstant.h; sourceTree = "<group>"; };
-		BCBBB7621BC99B2D00A83B89 /* MeiApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MeiApp-Prefix.pch"; path = "Modal/MeiApp-Prefix.pch"; sourceTree = "<group>"; };
 		BCBBB7641BCA0A7D00A83B89 /* ManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerViewController.h; sourceTree = "<group>"; };
 		BCBBB7651BCA0A7D00A83B89 /* ManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerViewController.m; sourceTree = "<group>"; };
 		BCBBB7671BCA0E9D00A83B89 /* QZTableViewBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZTableViewBaseController.h; sourceTree = "<group>"; };
 		BCBBB7681BCA0E9D00A83B89 /* QZTableViewBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZTableViewBaseController.m; sourceTree = "<group>"; };
+		BCC034A81BCB489000459F3D /* MeiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MeiApp-Prefix.pch"; sourceTree = "<group>"; };
 		BCC599AE1BC40AB80004E1A7 /* MeiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC599B21BC40AB80004E1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCC599B31BC40AB80004E1A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -184,10 +184,10 @@
 		BCBBB7631BC99B8900A83B89 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				BCC034A81BCB489000459F3D /* MeiApp-Prefix.pch */,
 				BCC599B51BC40AB80004E1A7 /* AppDelegate.h */,
 				BCC599B61BC40AB80004E1A7 /* AppDelegate.m */,
 				BCC599C01BC40AB80004E1A7 /* LaunchScreen.xib */,
-				BCBBB7621BC99B2D00A83B89 /* MeiApp-Prefix.pch */,
 			);
 			name = AppDelegate;
 			sourceTree = "<group>";
@@ -481,6 +481,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiApp-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -523,6 +525,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiApp-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -541,6 +545,8 @@
 			baseConfigurationReference = 61E18CD07F0564216E423715 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiApp-Prefix.pch";
 				INFOPLIST_FILE = MeiApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -553,6 +559,8 @@
 			baseConfigurationReference = 2E5C696BC31503D56A4AD969 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiApp-Prefix.pch";
 				INFOPLIST_FILE = MeiApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
