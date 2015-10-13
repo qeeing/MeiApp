@@ -24,7 +24,6 @@
 - (instancetype)init{
     //断言
     NSAssert(NO, @"单例不可调用init/new");
-    
     return nil;
 }
 

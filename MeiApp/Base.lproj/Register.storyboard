@@ -180,12 +180,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="上传税务登记扫描证件" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDK-hs-l1z">
-                                <rect key="frame" x="36" y="263" width="249" height="30"/>
+                                <rect key="frame" x="36" y="280" width="249" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="上传营业执照" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GEp-in-rMg">
-                                <rect key="frame" x="36" y="201" width="249" height="30"/>
+                                <rect key="frame" x="36" y="230" width="249" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -201,7 +201,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店铺名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PbQ-q8-Jzf">
-                                <rect key="frame" x="36" y="131" width="249" height="30"/>
+                                <rect key="frame" x="36" y="180" width="249" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -213,8 +213,8 @@
                             <constraint firstItem="GEp-in-rMg" firstAttribute="leading" secondItem="SDK-hs-l1z" secondAttribute="leading" id="BNA-ci-WdH"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="top" secondItem="emS-9L-Ba8" secondAttribute="bottom" constant="62" id="Esh-XG-riv"/>
                             <constraint firstItem="GEp-in-rMg" firstAttribute="top" secondItem="emS-9L-Ba8" secondAttribute="bottom" constant="235" id="T4o-Hu-O7s"/>
-                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="top" secondItem="emS-9L-Ba8" secondAttribute="bottom" constant="67" id="UXg-NU-kre"/>
-                            <constraint firstItem="SDK-hs-l1z" firstAttribute="top" secondItem="GEp-in-rMg" secondAttribute="bottom" constant="32" id="fHu-df-vsd"/>
+                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="emS-9L-Ba8" secondAttribute="bottom" constant="30" id="UXg-NU-kre"/>
+                            <constraint firstItem="SDK-hs-l1z" firstAttribute="top" secondItem="GEp-in-rMg" secondAttribute="bottom" constant="20" id="fHu-df-vsd"/>
                             <constraint firstItem="wzx-rQ-mGk" firstAttribute="top" secondItem="05S-Q9-jBB" secondAttribute="bottom" constant="208" id="hPS-yO-Fcw"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="PBx-JY-eSv" secondAttribute="leadingMargin" constant="20" id="hy0-8K-0QH"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="width" secondItem="GEp-in-rMg" secondAttribute="width" id="mD0-HP-olO"/>
@@ -223,8 +223,9 @@
                             <constraint firstItem="05S-Q9-jBB" firstAttribute="leading" secondItem="SDK-hs-l1z" secondAttribute="leading" id="qHc-PF-hxi"/>
                             <constraint firstItem="05S-Q9-jBB" firstAttribute="top" secondItem="emS-9L-Ba8" secondAttribute="bottom" constant="364" id="qnQ-Ms-NzI"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="width" secondItem="SDK-hs-l1z" secondAttribute="width" id="sbl-Ic-Rit"/>
+                            <constraint firstItem="GEp-in-rMg" firstAttribute="top" secondItem="PbQ-q8-Jzf" secondAttribute="bottom" constant="20" id="u8k-zT-x5n"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="GEp-in-rMg" secondAttribute="leading" id="uiy-sd-oIg"/>
-                            <constraint firstItem="05S-Q9-jBB" firstAttribute="top" secondItem="SDK-hs-l1z" secondAttribute="bottom" constant="37" id="xhj-hP-1UX"/>
+                            <constraint firstItem="05S-Q9-jBB" firstAttribute="top" secondItem="SDK-hs-l1z" secondAttribute="bottom" constant="20" id="xhj-hP-1UX"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="GEp-in-rMg" secondAttribute="leading" id="zEQ-Oh-SMx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PbQ-q8-Jzf" secondAttribute="trailing" constant="19" id="zKT-rT-TyJ"/>
                         </constraints>
