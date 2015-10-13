@@ -19,11 +19,12 @@
     // Do any additional setup after loading the view.
 }
 
-- (IBAction)registerSucceed:(id)sender {
+//注册成功、审核通过，跳转到店铺管理页面
+- (IBAction)managerViewController:(id)sender {
     //生成storyboard
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     //通过Identifier找到storyboard中的某个ViewController
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"loginSucceedVCId"];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ManagerVCId"];
     //加载指定的ViewController
     [self.navigationController pushViewController:vc animated:YES];
 }

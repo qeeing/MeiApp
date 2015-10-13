@@ -8,7 +8,7 @@
 
 #import "UIImage+QZCompress.h"
 
-#define COMPRESSION 0.8f
+#define COMPRESSION 1.0f
 //static CGFloat const compression = 0.9f;
 static CGFloat const maxCompression = 0.3f;
 
@@ -45,7 +45,7 @@ static CGFloat const maxCompression = 0.3f;
     NSData *imageData = UIImageJPEGRepresentation(image, compression);
     NSUInteger imageFileSize = imageData.length / 1024; //KB
     if (imageFileSize <= maxFileSize) {
-        return image;
+        return [UIImage imageWithData:imageData];
     }
     
     //图片太大就继续压缩
