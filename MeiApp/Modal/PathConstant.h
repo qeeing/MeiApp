@@ -60,7 +60,7 @@ static inline NSString *UserPreferencesPath()
                            (NSLibraryDirectory, NSUserDomainMask, YES)
                            objectAtIndex:0];
     mediaPath = [mediaPath stringByAppendingPathComponent:@"cache"];
-    mediaPath = [mediaPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/preferences", jid]];
+    mediaPath = [mediaPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/preferences", userId]];
     CreateDirectory(mediaPath);
     return mediaPath;
 }
