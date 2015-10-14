@@ -12,6 +12,6 @@
 
 @property (nonatomic, strong) NSString *userId;
 
-+ (instancetype)sharedInstance;
++ (instancetype)shareInstance;
 
 @end
