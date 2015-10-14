@@ -134,12 +134,12 @@
         <scene sceneID="NCb-H2-wzK">
             <objects>
                 <tableViewController title="订单管理" id="N6X-Ia-Rqr" customClass="QZTableViewBaseController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" id="wDh-Cu-oeW">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" id="wDh-Cu-oeW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="billingCellId" rowHeight="110" id="N9K-LY-Hq3">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderCellId" rowHeight="110" id="N9K-LY-Hq3" customClass="OrderTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N9K-LY-Hq3" id="amr-py-ilY">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -251,6 +251,9 @@
                                                     <exclude reference="AtY-Od-aSb"/>
                                                 </mask>
                                             </variation>
+                                            <connections>
+                                                <action selector="closeOrderButtonPressed:" destination="N9K-LY-Hq3" eventType="touchUpInside" id="Lyd-rs-EKg"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4f-fw-r1K">
                                             <rect key="frame" x="242" y="71" width="70" height="26"/>
@@ -270,6 +273,9 @@
                                                     <real key="value" value="0.29999999999999999"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="completeOrderButtonPressed:" destination="N9K-LY-Hq3" eventType="touchUpInside" id="tIr-aL-LKo"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务名称：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0r-UA-xxF">
                                             <rect key="frame" x="14" y="35" width="85" height="20.5"/>
@@ -327,6 +333,10 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="orderIdLabel" destination="F84-rB-LGl" id="gbK-nS-dnX"/>
+                                    <outlet property="orderPhoneLabel" destination="rxr-Xi-8FD" id="ggL-3m-f4q"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
