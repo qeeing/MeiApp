@@ -1,14 +1,14 @@
 //
 //  UIImage+QZCompress.m
-//  SuningEIM
+//  MeiApp
 //
 //  Created by QianLei on 15/9/14.
-//  Copyright (c) 2015年 suning. All rights reserved.
+//  Copyright (c) 2015年 channe. All rights reserved.
 //
 
 #import "UIImage+QZCompress.h"
 
-#define COMPRESSION 0.8f
+#define COMPRESSION 1.0f
 //static CGFloat const compression = 0.9f;
 static CGFloat const maxCompression = 0.3f;
 
@@ -45,7 +45,7 @@ static CGFloat const maxCompression = 0.3f;
     NSData *imageData = UIImageJPEGRepresentation(image, compression);
     NSUInteger imageFileSize = imageData.length / 1024; //KB
     if (imageFileSize <= maxFileSize) {
-        return image;
+        return [UIImage imageWithData:imageData];
     }
     
     //图片太大就继续压缩

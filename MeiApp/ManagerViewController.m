@@ -31,6 +31,16 @@
     self.navigationController.navigationBar.hidden = NO;
 }
 
+//注销登录，跳转到注册、登录页面
+- (IBAction)signupLoginViewController:(id)sender {
+    //生成storyboard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Register" bundle:nil];
+    //通过Identifier找到storyboard中的某个ViewController
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ADViewControllerId"];
+    //加载指定的ViewController
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

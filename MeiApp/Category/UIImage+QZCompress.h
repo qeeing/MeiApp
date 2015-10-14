@@ -1,9 +1,9 @@
 //
 //  UIImage+QZCompress.h
-//  SuningEIM
+//  MeiApp
 //
 //  Created by QianLei on 15/9/14.
-//  Copyright (c) 2015年 suning. All rights reserved.
+//  Copyright (c) 2015年 channe. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

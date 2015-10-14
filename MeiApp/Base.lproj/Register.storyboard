@@ -142,7 +142,7 @@
                             <constraint firstItem="QwH-Be-xxm" firstAttribute="leading" secondItem="h5f-TO-j8f" secondAttribute="leadingMargin" constant="20" id="zJk-x9-B5i"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rEK-Os-LqK"/>
+                    <navigationItem key="navigationItem" title="注册" id="Zmm-fF-TGR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sM5-sg-9I1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -241,16 +241,17 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="填写店铺资料" id="jBT-k4-4mY"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cce-vA-5Fu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="651" y="10"/>
+            <point key="canvasLocation" x="-713" y="724"/>
         </scene>
         <!--注册成功-->
         <scene sceneID="M9X-9r-2fA">
             <objects>
-                <viewController title="注册成功" id="zrE-oh-dzm" customClass="RegisterDoneViewController" sceneMemberID="viewController">
+                <viewController title="注册成功" id="zrE-oh-dzm" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LlK-RX-EOg"/>
                         <viewControllerLayoutGuide type="bottom" id="q7K-dg-2r4"/>
@@ -259,7 +260,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LN6-Kz-ue8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LN6-Kz-ue8">
                                 <rect key="frame" x="36" y="330" width="249" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="确定">
@@ -267,7 +268,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="registerSucceed:" destination="zrE-oh-dzm" eventType="touchUpInside" id="1zT-dT-Sgi"/>
+                                    <segue destination="Ntq-oh-CCC" kind="show" id="3Pa-3O-aKo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -282,7 +283,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dja-Nh-Qeg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075" y="10"/>
+            <point key="canvasLocation" x="-289" y="724"/>
+        </scene>
+        <!--审核结果-->
+        <scene sceneID="LjC-bL-Y6P">
+            <objects>
+                <viewController title="审核结果" id="Ntq-oh-CCC" customClass="RegisterDoneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eK4-mm-9VH"/>
+                        <viewControllerLayoutGuide type="bottom" id="317-If-65s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fRp-AN-fTV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZM-ji-6nj">
+                                <rect key="frame" x="36" y="330" width="249" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="店铺管理、填写店铺资料">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="managerViewController:" destination="Ntq-oh-CCC" eventType="touchUpInside" id="dMk-iF-3t9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="317-If-65s" firstAttribute="top" secondItem="WZM-ji-6nj" secondAttribute="bottom" constant="208" id="ATn-PZ-9TL"/>
+                            <constraint firstItem="WZM-ji-6nj" firstAttribute="leading" secondItem="fRp-AN-fTV" secondAttribute="leadingMargin" constant="20" id="qbw-c7-Rnm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WZM-ji-6nj" secondAttribute="trailing" constant="19" id="ztd-K9-NZJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sz2-xA-gGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="724"/>
         </scene>
     </scenes>
     <resources>

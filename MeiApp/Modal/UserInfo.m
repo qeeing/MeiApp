@@ -10,15 +10,15 @@
 
 @implementation UserInfo
 
-+ (instancetype)sharedInstance;
++ (instancetype)shareInstance;
 {
-    static id _sharedInstance = nil;
+    static id _shareInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[self alloc] initSingleton];
+        _shareInstance = [[self alloc] initSingleton];
     });
     
-    return _sharedInstance;
+    return _shareInstance;
 }
 
 - (instancetype)init{
