@@ -1,3 +1,3 @@
-MeiApp Readme
+MeiApp 特点：
 
-GPL 版权许可证
+1，基于多个 StoryBoard 开发：用代码在2个 StoryBoard 间相互调用；
