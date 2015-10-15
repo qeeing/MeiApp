@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E1355FB1308A7CB31CAF711 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE0DEA99D2BFCB1014FCAB3 /* libPods.a */; };
+		2D3F458E1BCFF401005F531B /* RegisteringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F458D1BCFF401005F531B /* RegisteringViewController.m */; };
 		2D424F991BC8F7C000347143 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D424F981BC8F7C000347143 /* RegisterViewController.m */; };
 		BC6A8E931BC82E9F00B1297D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6A8E921BC82E9F00B1297D /* Login.storyboard */; };
 		BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A8E951BC8325900B1297D /* LoginViewController.m */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		0AE0DEA99D2BFCB1014FCAB3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D3F458C1BCFF401005F531B /* RegisteringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteringViewController.h; sourceTree = "<group>"; };
+		2D3F458D1BCFF401005F531B /* RegisteringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteringViewController.m; sourceTree = "<group>"; };
 		2D424F971BC8F7C000347143 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		2D424F981BC8F7C000347143 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		2E5C696BC31503D56A4AD969 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				BCC599BB1BC40AB80004E1A7 /* Register.storyboard */,
 				2D424F971BC8F7C000347143 /* RegisterViewController.h */,
 				2D424F981BC8F7C000347143 /* RegisterViewController.m */,
+				2D3F458C1BCFF401005F531B /* RegisteringViewController.h */,
+				2D3F458D1BCFF401005F531B /* RegisteringViewController.m */,
 				BCBBB73A1BC93EE400A83B89 /* RegisterDoneViewController.h */,
 				BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */,
 				BC6A8E921BC82E9F00B1297D /* Login.storyboard */,
@@ -419,6 +424,7 @@
 				BCBBB7661BCA0A7D00A83B89 /* ManagerViewController.m in Sources */,
 				BCBBB7601BC999C900A83B89 /* UserInfo.m in Sources */,
 				BCBBB73C1BC93EE400A83B89 /* RegisterDoneViewController.m in Sources */,
+				2D3F458E1BCFF401005F531B /* RegisteringViewController.m in Sources */,
 				BCBBB7691BCA0E9D00A83B89 /* QZTableViewBaseController.m in Sources */,
 				BCC599B41BC40AB80004E1A7 /* main.m in Sources */,
 			);
