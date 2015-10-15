@@ -8,15 +8,24 @@
 
 #import "QZTableViewBaseController.h"
 #import "CALayer+Additions.h"
+#import "OrderTableViewCell.h"
 
-@interface QZTableViewBaseController ()
+@interface QZTableViewBaseController ()<OrderCellDelegate>
+
+@property (nonatomic, strong)NSArray *dataArray;
 
 @end
 
-@implementation QZTableViewBaseController
+@implementation QZTableViewBaseController {
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self appearanceForTableView];
+    
+    [self fetchDataFromServer];
     
     // Uncomment the following line to preserve selection between presentations.
 //     self.clearsSelectionOnViewWillAppear = NO;
@@ -25,26 +34,117 @@
 //     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)appearanceForTableView
+{
+    UIColor *refreshColor = [UIColor redColor];
+
+    // 下拉刷新
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    // 设置标题
+    NSAttributedString *refreshTitle = [[NSAttributedString alloc]
+                                        initWithString: @"下拉刷新"
+                                        attributes:@{NSForegroundColorAttributeName : refreshColor }];
+    refreshControl.attributedTitle = refreshTitle;
+    refreshControl.tintColor = refreshColor;
+    //给UIRefreshControl加入背景色，即使是clearColor，刷新标识将会随着下拉逐渐从上部出现
+    refreshControl.backgroundColor = [UIColor clearColor];
+    self.refreshControl = refreshControl;
+    
+    //cell 分割线缩进
+    //    self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    //不显示空白 cell
+    self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
-#pragma mark - Table view data source
+- (void)refreshControlHandler
+{
+    [self.refreshControl endRefreshing];
+    
+    [self fetchDataFromServer];
+    
+    [self.tableView reloadData];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView*)scrollView
+{
+    if( self.refreshControl.isRefreshing ) {
+        [self refreshControlHandler];
+    }
+}
+
+/*
+ "orders":[{"orderid":id,"sumprice":总价,"createtime"：创建时间," serviceid":," servicename":服务名称,"userid":," ordphone":," state": },{}]
+ */
+- (void)fetchDataFromServer;
+{
+    self.dataArray = @[
+                       @{@"orderid" :@1,
+                         @"sumprice":@"总价",
+                         @"createtime"  :@"2015年10月14日22:47",
+                         @"serviceid"   :@123,
+                         @"servicename" :@"服务名称1",
+                         @"userid"  :@3121,
+                         @"ordphone":@"18551601413",
+                         @"state"   :@2 },
+                       @{@"orderid" :@2,
+                         @"sumprice":@"总价",
+                         @"createtime"  :@"2015年10月14日22:47",
+                         @"serviceid"   :@123,
+                         @"servicename" :@"服务名称1",
+                         @"userid"  :@3121,
+                         @"ordphone":@"18551601412",
+                         @"state"   :@2 }
+                       ];
+}
+
+#pragma mark - Table view data source & Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"billingCellId" forIndexPath:indexPath];
-        
+    OrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"orderCellId" forIndexPath:indexPath];
+    cell.delegate = self;
+    
+    [cell orderCellInfo:self.dataArray[indexPath.row][@"ordphone"]];
+    
     return cell;
 }
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"关闭订单";
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 从数据源中删除
+//    [_data removeObjectAtIndex:indexPath.row];
+    // 从列表中删除
+//    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
+#pragma mark - 订单管理操作：关闭、完成
+- (void)closeOrderCell:(OrderTableViewCell *)cell;
+{
+    
+}
+
+- (void)completeOrderCell:(OrderTableViewCell *)cell;
+{
+    
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -89,5 +189,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end

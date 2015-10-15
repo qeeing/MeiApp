@@ -21,6 +21,7 @@
 		BCBBB7601BC999C900A83B89 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB75F1BC999C900A83B89 /* UserInfo.m */; };
 		BCBBB7661BCA0A7D00A83B89 /* ManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB7651BCA0A7D00A83B89 /* ManagerViewController.m */; };
 		BCBBB7691BCA0E9D00A83B89 /* QZTableViewBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB7681BCA0E9D00A83B89 /* QZTableViewBaseController.m */; };
+		BCBE7F341BCE9D6900A7AABA /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBE7F331BCE9D6900A7AABA /* OrderTableViewCell.m */; };
 		BCC599B41BC40AB80004E1A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC599B31BC40AB80004E1A7 /* main.m */; };
 		BCC599B71BC40AB80004E1A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC599B61BC40AB80004E1A7 /* AppDelegate.m */; };
 		BCC599BD1BC40AB80004E1A7 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC599BB1BC40AB80004E1A7 /* Register.storyboard */; };
@@ -71,6 +72,8 @@
 		BCBBB7651BCA0A7D00A83B89 /* ManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerViewController.m; sourceTree = "<group>"; };
 		BCBBB7671BCA0E9D00A83B89 /* QZTableViewBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZTableViewBaseController.h; sourceTree = "<group>"; };
 		BCBBB7681BCA0E9D00A83B89 /* QZTableViewBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZTableViewBaseController.m; sourceTree = "<group>"; };
+		BCBE7F321BCE9D6900A7AABA /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
+		BCBE7F331BCE9D6900A7AABA /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
 		BCC034A81BCB489000459F3D /* MeiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MeiApp-Prefix.pch"; sourceTree = "<group>"; };
 		BCC599AE1BC40AB80004E1A7 /* MeiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC599B21BC40AB80004E1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 				BCBBB7651BCA0A7D00A83B89 /* ManagerViewController.m */,
 				BCBBB7671BCA0E9D00A83B89 /* QZTableViewBaseController.h */,
 				BCBBB7681BCA0E9D00A83B89 /* QZTableViewBaseController.m */,
+				BCBE7F321BCE9D6900A7AABA /* OrderTableViewCell.h */,
+				BCBE7F331BCE9D6900A7AABA /* OrderTableViewCell.m */,
 				BC6A8E941BC8325900B1297D /* LoginViewController.h */,
 				BC6A8E951BC8325900B1297D /* LoginViewController.m */,
 				BCBBB7631BC99B8900A83B89 /* AppDelegate */,
@@ -408,6 +413,7 @@
 				BCBBB7521BC995E900A83B89 /* UIView+frameAdjust.m in Sources */,
 				BCC599B71BC40AB80004E1A7 /* AppDelegate.m in Sources */,
 				BCBBB7511BC995E900A83B89 /* CALayer+Additions.m in Sources */,
+				BCBE7F341BCE9D6900A7AABA /* OrderTableViewCell.m in Sources */,
 				BCBBB7501BC995E900A83B89 /* UIImage+QZCompress.m in Sources */,
 				2D424F991BC8F7C000347143 /* RegisterViewController.m in Sources */,
 				BCBBB7661BCA0A7D00A83B89 /* ManagerViewController.m in Sources */,
