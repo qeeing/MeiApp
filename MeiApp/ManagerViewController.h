@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ManagerViewController : UIViewController
+@interface ManagerViewController : QZBaseViewController
 
 @end

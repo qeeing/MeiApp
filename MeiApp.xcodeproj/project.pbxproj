@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0E1355FB1308A7CB31CAF711 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE0DEA99D2BFCB1014FCAB3 /* libPods.a */; };
 		2D424F991BC8F7C000347143 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D424F981BC8F7C000347143 /* RegisterViewController.m */; };
+		BC140C631BCFF05F00ED4251 /* QZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */; };
+		BC140C661BCFF09000ED4251 /* QZBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */; };
 		BC6A8E931BC82E9F00B1297D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6A8E921BC82E9F00B1297D /* Login.storyboard */; };
 		BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A8E951BC8325900B1297D /* LoginViewController.m */; };
 		BCBBB73C1BC93EE400A83B89 /* RegisterDoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */; };
@@ -20,7 +22,7 @@
 		BCBBB75B1BC997CC00A83B89 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB75A1BC997CC00A83B89 /* Common.m */; };
 		BCBBB7601BC999C900A83B89 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB75F1BC999C900A83B89 /* UserInfo.m */; };
 		BCBBB7661BCA0A7D00A83B89 /* ManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB7651BCA0A7D00A83B89 /* ManagerViewController.m */; };
-		BCBBB7691BCA0E9D00A83B89 /* QZTableViewBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB7681BCA0E9D00A83B89 /* QZTableViewBaseController.m */; };
+		BCBBB7691BCA0E9D00A83B89 /* OrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB7681BCA0E9D00A83B89 /* OrderTableViewController.m */; };
 		BCBE7F341BCE9D6900A7AABA /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBE7F331BCE9D6900A7AABA /* OrderTableViewCell.m */; };
 		BCC599B41BC40AB80004E1A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC599B31BC40AB80004E1A7 /* main.m */; };
 		BCC599B71BC40AB80004E1A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC599B61BC40AB80004E1A7 /* AppDelegate.m */; };
@@ -46,13 +48,18 @@
 		2D424F981BC8F7C000347143 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		2E5C696BC31503D56A4AD969 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		61E18CD07F0564216E423715 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BC0599511BCFF3F3003622DC /* UIConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstant.h; sourceTree = "<group>"; };
+		BC0599531BCFF738003622DC /* MeiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MeiApp-Prefix.pch"; sourceTree = "<group>"; };
+		BC140C611BCFF05F00ED4251 /* QZBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZBaseViewController.h; sourceTree = "<group>"; };
+		BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseViewController.m; sourceTree = "<group>"; };
+		BC140C641BCFF09000ED4251 /* QZBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZBaseTableViewController.h; sourceTree = "<group>"; };
+		BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseTableViewController.m; sourceTree = "<group>"; };
 		BC6A8E921BC82E9F00B1297D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC6A8E941BC8325900B1297D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BC6A8E951BC8325900B1297D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BCBBB73A1BC93EE400A83B89 /* RegisterDoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterDoneViewController.h; sourceTree = "<group>"; };
 		BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterDoneViewController.m; sourceTree = "<group>"; };
 		BCBBB7451BC993A600A83B89 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		BCBBB7471BC994D100A83B89 /* UIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
 		BCBBB74A1BC995E900A83B89 /* UIImage+QZCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+QZCompress.h"; sourceTree = "<group>"; };
 		BCBBB74B1BC995E900A83B89 /* UIImage+QZCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QZCompress.m"; sourceTree = "<group>"; };
 		BCBBB74C1BC995E900A83B89 /* CALayer+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Additions.h"; sourceTree = "<group>"; };
@@ -70,11 +77,10 @@
 		BCBBB7611BC99A0A00A83B89 /* PathConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathConstant.h; sourceTree = "<group>"; };
 		BCBBB7641BCA0A7D00A83B89 /* ManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerViewController.h; sourceTree = "<group>"; };
 		BCBBB7651BCA0A7D00A83B89 /* ManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerViewController.m; sourceTree = "<group>"; };
-		BCBBB7671BCA0E9D00A83B89 /* QZTableViewBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZTableViewBaseController.h; sourceTree = "<group>"; };
-		BCBBB7681BCA0E9D00A83B89 /* QZTableViewBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZTableViewBaseController.m; sourceTree = "<group>"; };
+		BCBBB7671BCA0E9D00A83B89 /* OrderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewController.h; sourceTree = "<group>"; };
+		BCBBB7681BCA0E9D00A83B89 /* OrderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewController.m; sourceTree = "<group>"; };
 		BCBE7F321BCE9D6900A7AABA /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
 		BCBE7F331BCE9D6900A7AABA /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
-		BCC034A81BCB489000459F3D /* MeiApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MeiApp-Prefix.pch"; sourceTree = "<group>"; };
 		BCC599AE1BC40AB80004E1A7 /* MeiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC599B21BC40AB80004E1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCC599B31BC40AB80004E1A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -124,11 +130,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BC140C671BCFF0FC00ED4251 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BCC599BB1BC40AB80004E1A7 /* Register.storyboard */,
+				BC140C611BCFF05F00ED4251 /* QZBaseViewController.h */,
+				BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */,
+				BC140C641BCFF09000ED4251 /* QZBaseTableViewController.h */,
+				BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */,
+			);
+			name = BaseViewController;
+			sourceTree = "<group>";
+		};
 		BCBBB7441BC9936C00A83B89 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				BCBBB7451BC993A600A83B89 /* 1.jpg */,
-				BCBBB7471BC994D100A83B89 /* UIConstants.h */,
+				BC0599511BCFF3F3003622DC /* UIConstant.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -187,7 +205,7 @@
 		BCBBB7631BC99B8900A83B89 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				BCC034A81BCB489000459F3D /* MeiApp-Prefix.pch */,
+				BC0599531BCFF738003622DC /* MeiApp-Prefix.pch */,
 				BCC599B51BC40AB80004E1A7 /* AppDelegate.h */,
 				BCC599B61BC40AB80004E1A7 /* AppDelegate.m */,
 				BCC599C01BC40AB80004E1A7 /* LaunchScreen.xib */,
@@ -218,11 +236,12 @@
 		BCC599B01BC40AB80004E1A7 /* MeiApp */ = {
 			isa = PBXGroup;
 			children = (
+				BCBBB7441BC9936C00A83B89 /* Resources */,
 				BCBBB7551BC9977B00A83B89 /* Common */,
 				BCBBB7531BC9972A00A83B89 /* Modal */,
 				BCBBB7491BC995A200A83B89 /* ThirdLibs */,
 				BCBBB7481BC995A200A83B89 /* Category */,
-				BCC599BB1BC40AB80004E1A7 /* Register.storyboard */,
+				BC140C671BCFF0FC00ED4251 /* BaseViewController */,
 				2D424F971BC8F7C000347143 /* RegisterViewController.h */,
 				2D424F981BC8F7C000347143 /* RegisterViewController.m */,
 				BCBBB73A1BC93EE400A83B89 /* RegisterDoneViewController.h */,
@@ -230,15 +249,14 @@
 				BC6A8E921BC82E9F00B1297D /* Login.storyboard */,
 				BCBBB7641BCA0A7D00A83B89 /* ManagerViewController.h */,
 				BCBBB7651BCA0A7D00A83B89 /* ManagerViewController.m */,
-				BCBBB7671BCA0E9D00A83B89 /* QZTableViewBaseController.h */,
-				BCBBB7681BCA0E9D00A83B89 /* QZTableViewBaseController.m */,
+				BCBBB7671BCA0E9D00A83B89 /* OrderTableViewController.h */,
+				BCBBB7681BCA0E9D00A83B89 /* OrderTableViewController.m */,
 				BCBE7F321BCE9D6900A7AABA /* OrderTableViewCell.h */,
 				BCBE7F331BCE9D6900A7AABA /* OrderTableViewCell.m */,
 				BC6A8E941BC8325900B1297D /* LoginViewController.h */,
 				BC6A8E951BC8325900B1297D /* LoginViewController.m */,
 				BCBBB7631BC99B8900A83B89 /* AppDelegate */,
 				BCC599BE1BC40AB80004E1A7 /* Images.xcassets */,
-				BCBBB7441BC9936C00A83B89 /* Resources */,
 				BCC599B11BC40AB80004E1A7 /* Supporting Files */,
 			);
 			path = MeiApp;
@@ -409,6 +427,8 @@
 			files = (
 				BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */,
 				BCBBB7581BC9978600A83B89 /* SystemInfo.m in Sources */,
+				BC140C631BCFF05F00ED4251 /* QZBaseViewController.m in Sources */,
+				BC140C661BCFF09000ED4251 /* QZBaseTableViewController.m in Sources */,
 				BCBBB75B1BC997CC00A83B89 /* Common.m in Sources */,
 				BCBBB7521BC995E900A83B89 /* UIView+frameAdjust.m in Sources */,
 				BCC599B71BC40AB80004E1A7 /* AppDelegate.m in Sources */,
@@ -419,7 +439,7 @@
 				BCBBB7661BCA0A7D00A83B89 /* ManagerViewController.m in Sources */,
 				BCBBB7601BC999C900A83B89 /* UserInfo.m in Sources */,
 				BCBBB73C1BC93EE400A83B89 /* RegisterDoneViewController.m in Sources */,
-				BCBBB7691BCA0E9D00A83B89 /* QZTableViewBaseController.m in Sources */,
+				BCBBB7691BCA0E9D00A83B89 /* OrderTableViewController.m in Sources */,
 				BCC599B41BC40AB80004E1A7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,7 +508,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiApp-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiApp/MeiApp-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -532,7 +552,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiApp-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiApp/MeiApp-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -552,7 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiApp-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiApp/MeiApp-Prefix.pch";
 				INFOPLIST_FILE = MeiApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -566,7 +586,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiApp-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MeiApp/MeiApp-Prefix.pch";
 				INFOPLIST_FILE = MeiApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

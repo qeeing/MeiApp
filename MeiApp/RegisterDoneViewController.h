@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegisterDoneViewController : UIViewController
+@interface RegisterDoneViewController : QZBaseViewController
 
 @end
