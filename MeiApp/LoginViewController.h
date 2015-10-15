@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : QZBaseViewController
 
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)segue;
 

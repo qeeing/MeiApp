@@ -29,7 +29,7 @@
                                     <segue destination="YBF-Jq-7dd" kind="show" id="zaR-Ru-MA2"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bIl-4s-YKp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="bIl-4s-YKp">
                                 <rect key="frame" x="110" y="116" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="BLf-P2-VEu"/>
@@ -75,7 +75,7 @@
                             <constraint firstItem="lQa-6i-HGT" firstAttribute="top" secondItem="V06-35-fB4" secondAttribute="bottom" constant="24" id="v9C-uF-7pH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="J9j-FV-ip9"/>
+                    <navigationItem key="navigationItem" title="登录" id="J9j-FV-ip9"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQh-th-CUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -133,7 +133,7 @@
         <!--订单管理-->
         <scene sceneID="NCb-H2-wzK">
             <objects>
-                <tableViewController title="订单管理" id="N6X-Ia-Rqr" customClass="QZTableViewBaseController" sceneMemberID="viewController">
+                <tableViewController title="订单管理" id="N6X-Ia-Rqr" customClass="OrderTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" id="wDh-Cu-oeW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,6 +344,9 @@
                             <outlet property="delegate" destination="N6X-Ia-Rqr" id="Icq-EH-XRp"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="订单信息" id="Arl-qn-0Yb">
+                        <barButtonItem key="rightBarButtonItem" title="筛选" id="NmA-2L-KF0"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ppn-As-FlS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -532,4 +535,7 @@
             <point key="canvasLocation" x="187" y="137"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="230" height="230"/>
+    </resources>
 </document>
