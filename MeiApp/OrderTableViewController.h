@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QZTableViewBaseController : UITableViewController
+@interface OrderTableViewController : QZBaseTableViewController
 
 @end
