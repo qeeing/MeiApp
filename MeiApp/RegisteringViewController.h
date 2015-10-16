@@ -10,4 +10,6 @@
 
 @interface RegisteringViewController : UIViewController
 
+#pragma 正则匹配用户名不能包含汉字
+- (BOOL)checkUserName:(NSString *) userName;
 @end
