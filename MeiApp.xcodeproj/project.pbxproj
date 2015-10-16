@@ -136,7 +136,6 @@
 		BC140C671BCFF0FC00ED4251 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BCC599BB1BC40AB80004E1A7 /* Register.storyboard */,
 				BC140C611BCFF05F00ED4251 /* QZBaseViewController.h */,
 				BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */,
 				BC140C641BCFF09000ED4251 /* QZBaseTableViewController.h */,
@@ -165,13 +164,6 @@
 				BCBBB74F1BC995E900A83B89 /* UIView+frameAdjust.m */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		BCBBB7491BC995A200A83B89 /* ThirdLibs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ThirdLibs;
 			sourceTree = "<group>";
 		};
 		BCBBB7531BC9972A00A83B89 /* Modal */ = {
@@ -240,11 +232,12 @@
 			isa = PBXGroup;
 			children = (
 				BCBBB7441BC9936C00A83B89 /* Resources */,
+				BCBBB7631BC99B8900A83B89 /* AppDelegate */,
 				BCBBB7551BC9977B00A83B89 /* Common */,
 				BCBBB7531BC9972A00A83B89 /* Modal */,
-				BCBBB7491BC995A200A83B89 /* ThirdLibs */,
 				BCBBB7481BC995A200A83B89 /* Category */,
 				BC140C671BCFF0FC00ED4251 /* BaseViewController */,
+				BCC599BB1BC40AB80004E1A7 /* Register.storyboard */,
 				2D424F971BC8F7C000347143 /* RegisterViewController.h */,
 				2D424F981BC8F7C000347143 /* RegisterViewController.m */,
 				2D3F458C1BCFF401005F531B /* RegisteringViewController.h */,
@@ -260,7 +253,6 @@
 				BCBE7F331BCE9D6900A7AABA /* OrderTableViewCell.m */,
 				BC6A8E941BC8325900B1297D /* LoginViewController.h */,
 				BC6A8E951BC8325900B1297D /* LoginViewController.m */,
-				BCBBB7631BC99B8900A83B89 /* AppDelegate */,
 				BCC599BE1BC40AB80004E1A7 /* Images.xcassets */,
 				BCC599B11BC40AB80004E1A7 /* Supporting Files */,
 			);

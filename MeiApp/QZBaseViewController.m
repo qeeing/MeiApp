@@ -21,7 +21,7 @@
     //按钮颜色
     self.navigationController.navigationBar.tintColor = AppColor;
     //标题颜色
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : AppColor };
+//    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : AppColor };
     //整个颜色
     //    self.navigationController.navigationBar.barTintColor = AppColor;
     
