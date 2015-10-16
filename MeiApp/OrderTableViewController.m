@@ -6,22 +6,24 @@
 //  Copyright (c) 2015年 QianLei. All rights reserved.
 //
 
-#import "QZTableViewBaseController.h"
+#import "OrderTableViewController.h"
 #import "CALayer+Additions.h"
 #import "OrderTableViewCell.h"
 
-@interface QZTableViewBaseController ()<OrderCellDelegate>
+@interface OrderTableViewController ()<OrderCellDelegate>
 
 @property (nonatomic, strong)NSArray *dataArray;
 
 @end
 
-@implementation QZTableViewBaseController {
+@implementation OrderTableViewController {
 
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    self.navigationController.navigationBar.tintColor = AppColor;
     
     [self appearanceForTableView];
     
@@ -36,7 +38,7 @@
 
 - (void)appearanceForTableView
 {
-    UIColor *refreshColor = [UIColor redColor];
+    UIColor *refreshColor = AppColor;
 
     // 下拉刷新
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];

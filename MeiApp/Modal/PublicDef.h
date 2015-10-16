@@ -35,4 +35,6 @@ typedef void (^QZCallBackBlockWithResult)(BOOL isSuccess, NSString *errorMsg, id
 typedef void (^QZArrayBlock)(NSArray *array);
 typedef void (^DoBlock)(id data);
 
+
+
 #endif
