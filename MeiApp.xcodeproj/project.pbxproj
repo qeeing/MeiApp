@@ -14,6 +14,8 @@
 		BC140C631BCFF05F00ED4251 /* QZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */; };
 		BC140C661BCFF09000ED4251 /* QZBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */; };
 		BC3E97071BD1F88300FE9D54 /* UIButton+QZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */; };
+		BC3E970A1BD20D7900FE9D54 /* QZBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E97091BD20D7900FE9D54 /* QZBaseView.m */; };
+		BC3E97101BD2141B00FE9D54 /* QZBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E970F1BD2141B00FE9D54 /* QZBaseTableView.m */; };
 		BC6A8E931BC82E9F00B1297D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6A8E921BC82E9F00B1297D /* Login.storyboard */; };
 		BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A8E951BC8325900B1297D /* LoginViewController.m */; };
 		BCBBB73C1BC93EE400A83B89 /* RegisterDoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */; };
@@ -59,6 +61,10 @@
 		BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseTableViewController.m; sourceTree = "<group>"; };
 		BC3E97051BD1F88300FE9D54 /* UIButton+QZAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+QZAppearance.h"; sourceTree = "<group>"; };
 		BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+QZAppearance.m"; sourceTree = "<group>"; };
+		BC3E97081BD20D7900FE9D54 /* QZBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZBaseView.h; sourceTree = "<group>"; };
+		BC3E97091BD20D7900FE9D54 /* QZBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseView.m; sourceTree = "<group>"; };
+		BC3E970E1BD2141B00FE9D54 /* QZBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZBaseTableView.h; sourceTree = "<group>"; };
+		BC3E970F1BD2141B00FE9D54 /* QZBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseTableView.m; sourceTree = "<group>"; };
 		BC6A8E921BC82E9F00B1297D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC6A8E941BC8325900B1297D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BC6A8E951BC8325900B1297D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -141,6 +147,10 @@
 				BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */,
 				BC140C641BCFF09000ED4251 /* QZBaseTableViewController.h */,
 				BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */,
+				BC3E97081BD20D7900FE9D54 /* QZBaseView.h */,
+				BC3E97091BD20D7900FE9D54 /* QZBaseView.m */,
+				BC3E970E1BD2141B00FE9D54 /* QZBaseTableView.h */,
+				BC3E970F1BD2141B00FE9D54 /* QZBaseTableView.m */,
 			);
 			name = BaseViewController;
 			sourceTree = "<group>";
@@ -433,8 +443,10 @@
 				BCBBB7521BC995E900A83B89 /* UIView+frameAdjust.m in Sources */,
 				BCC599B71BC40AB80004E1A7 /* AppDelegate.m in Sources */,
 				BCBBB7511BC995E900A83B89 /* CALayer+Additions.m in Sources */,
+				BC3E970A1BD20D7900FE9D54 /* QZBaseView.m in Sources */,
 				BCBE7F341BCE9D6900A7AABA /* OrderTableViewCell.m in Sources */,
 				BCBBB7501BC995E900A83B89 /* UIImage+QZCompress.m in Sources */,
+				BC3E97101BD2141B00FE9D54 /* QZBaseTableView.m in Sources */,
 				2D424F991BC8F7C000347143 /* RegisterViewController.m in Sources */,
 				BCBBB7661BCA0A7D00A83B89 /* ManagerViewController.m in Sources */,
 				BCBBB7601BC999C900A83B89 /* UserInfo.m in Sources */,
