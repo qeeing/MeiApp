@@ -9,7 +9,7 @@
 #import "RegisteringViewController.h"
 #import "UIView+Shake.h"
 
-@interface RegisteringViewController ()
+@interface RegisteringViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *password2TextField;
@@ -23,13 +23,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     // Do any additional setup after loading the view.
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//点击空白处隐藏键盘
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+      [self.view endEditing:YES];
+//    [self.userNameTextField resignFirstResponder];
+//    [self.passwordTextField resignFirstResponder];
+//    [self.password2TextField resignFirstResponder];
+//    self.alertLabel.hidden = YES;
 }
 
 
@@ -44,37 +51,37 @@
 
 - (IBAction)nextButtonPressed:(UIButton *)sender {
 }
-
-- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
-{
-    if ([identifier isEqualToString:@"registerNextSegueId"]) {
-        if (IsStrEmpty(self.passwordTextField.text)||
-            IsStrEmpty(self.password2TextField.text)||
-            IsStrEmpty(self.userNameTextField.text))
-        {
-            [self.nextButton shake];
-            self.alertLabel.hidden = NO;
-            self.alertLabel.text = @"内容不能为空！";
-            return NO;
-        }else if ([self isUserNameContainsChinese:self.userNameTextField.text]){
-            [self.userNameTextField shake];
-            self.alertLabel.hidden = NO;
-            self.alertLabel.text = @"用户名不能包含汉字";
-            return NO;
-        }else if (![self.passwordTextField.text isEqualToString:self.password2TextField.text]){
-            //        [self.nextButton shake];
-            [self.password2TextField shake];
-            self.alertLabel.hidden = NO;
-            self.alertLabel.text = @"两次密码需要相同";
-            return NO;
-        } else{
-            self.alertLabel.hidden = YES;
-            return YES;
-        }
-    }else {
-        return YES;
-    }
-}
+//添加验证
+//- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+//{
+//    if ([identifier isEqualToString:@"registerNextSegueId"]) {
+//        if (IsStrEmpty(self.passwordTextField.text)||
+//            IsStrEmpty(self.password2TextField.text)||
+//            IsStrEmpty(self.userNameTextField.text))
+//        {
+//            [self.nextButton shake];
+//            self.alertLabel.hidden = NO;
+//            self.alertLabel.text = @"内容不能为空！";
+//            return NO;
+//        }else if ([self isUserNameContainsChinese:self.userNameTextField.text]){
+//            [self.userNameTextField shake];
+//            self.alertLabel.hidden = NO;
+//            self.alertLabel.text = @"用户名不能包含汉字";
+//            return NO;
+//        }else if (![self.passwordTextField.text isEqualToString:self.password2TextField.text]){
+//            //        [self.nextButton shake];
+//            [self.password2TextField shake];
+//            self.alertLabel.hidden = NO;
+//            self.alertLabel.text = @"两次密码需要相同";
+//            return NO;
+//        } else{
+//            self.alertLabel.hidden = YES;
+//            return YES;
+//        }
+//    }else {
+//        return YES;
+//    }
+//}
 
 #pragma mark - 正则匹配
 

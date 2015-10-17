@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import <QuartzCore/QuartzCore.h> 
+
 #import "RegisterViewController.h"
 #import "ManagerViewController.h"
+#import "UIButton+QZAppearance.h"
 
 @interface AppDelegate ()
 
@@ -33,8 +34,10 @@
     [UIButton appearance].backgroundColor = AppColor;
     [UIButton appearanceWhenContainedIn:[RegisterViewController class], nil].backgroundColor = [UIColor whiteColor];
     [UIButton appearanceWhenContainedIn:[ManagerViewController class], nil].backgroundColor = [UIColor whiteColor];
-    [UIButton appearance].layer.cornerRadius = 8;
-    [UIButton appearance].layer.masksToBounds = YES;
+//    [UIButton appearanceWhenContainedIn:[UIViewController class], nil].backgroundColor = AppColor;
+
+    //按钮圆角
+    [UIButton appearance].cornerRadius = 4;
     //VC 背景色
 
 }

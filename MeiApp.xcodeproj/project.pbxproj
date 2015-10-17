@@ -11,8 +11,10 @@
 		2D3F458E1BCFF401005F531B /* RegisteringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F458D1BCFF401005F531B /* RegisteringViewController.m */; };
 		2D424F991BC8F7C000347143 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D424F981BC8F7C000347143 /* RegisterViewController.m */; };
 		2D88910F1BD121FA00C84980 /* OrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB7681BCA0E9D00A83B89 /* OrderTableViewController.m */; };
+		2D8891121BD203B600C84980 /* ShopUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8891111BD203B600C84980 /* ShopUploadViewController.m */; };
 		BC140C631BCFF05F00ED4251 /* QZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */; };
 		BC140C661BCFF09000ED4251 /* QZBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */; };
+		BC3E97071BD1F88300FE9D54 /* UIButton+QZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */; };
 		BC6A8E931BC82E9F00B1297D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6A8E921BC82E9F00B1297D /* Login.storyboard */; };
 		BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A8E951BC8325900B1297D /* LoginViewController.m */; };
 		BCBBB73C1BC93EE400A83B89 /* RegisterDoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */; };
@@ -48,6 +50,8 @@
 		2D3F458D1BCFF401005F531B /* RegisteringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteringViewController.m; sourceTree = "<group>"; };
 		2D424F971BC8F7C000347143 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		2D424F981BC8F7C000347143 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		2D8891101BD203B600C84980 /* ShopUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopUploadViewController.h; sourceTree = "<group>"; };
+		2D8891111BD203B600C84980 /* ShopUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopUploadViewController.m; sourceTree = "<group>"; };
 		2E5C696BC31503D56A4AD969 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		61E18CD07F0564216E423715 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0599511BCFF3F3003622DC /* UIConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstant.h; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseViewController.m; sourceTree = "<group>"; };
 		BC140C641BCFF09000ED4251 /* QZBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZBaseTableViewController.h; sourceTree = "<group>"; };
 		BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseTableViewController.m; sourceTree = "<group>"; };
+		BC3E97051BD1F88300FE9D54 /* UIButton+QZAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+QZAppearance.h"; sourceTree = "<group>"; };
+		BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+QZAppearance.m"; sourceTree = "<group>"; };
 		BC6A8E921BC82E9F00B1297D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC6A8E941BC8325900B1297D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BC6A8E951BC8325900B1297D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -159,6 +165,8 @@
 				BCBBB74D1BC995E900A83B89 /* CALayer+Additions.m */,
 				BCBBB74E1BC995E900A83B89 /* UIView+frameAdjust.h */,
 				BCBBB74F1BC995E900A83B89 /* UIView+frameAdjust.m */,
+				BC3E97051BD1F88300FE9D54 /* UIButton+QZAppearance.h */,
+				BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -239,6 +247,8 @@
 				2D424F981BC8F7C000347143 /* RegisterViewController.m */,
 				2D3F458C1BCFF401005F531B /* RegisteringViewController.h */,
 				2D3F458D1BCFF401005F531B /* RegisteringViewController.m */,
+				2D8891101BD203B600C84980 /* ShopUploadViewController.h */,
+				2D8891111BD203B600C84980 /* ShopUploadViewController.m */,
 				BCBBB73A1BC93EE400A83B89 /* RegisterDoneViewController.h */,
 				BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */,
 				BC6A8E921BC82E9F00B1297D /* Login.storyboard */,
@@ -418,11 +428,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3E97071BD1F88300FE9D54 /* UIButton+QZAppearance.m in Sources */,
 				2D88910F1BD121FA00C84980 /* OrderTableViewController.m in Sources */,
 				BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */,
 				BCBBB7581BC9978600A83B89 /* SystemInfo.m in Sources */,
 				BC140C631BCFF05F00ED4251 /* QZBaseViewController.m in Sources */,
 				BC140C661BCFF09000ED4251 /* QZBaseTableViewController.m in Sources */,
+				2D8891121BD203B600C84980 /* ShopUploadViewController.m in Sources */,
 				BCBBB75B1BC997CC00A83B89 /* Common.m in Sources */,
 				BCBBB7521BC995E900A83B89 /* UIView+frameAdjust.m in Sources */,
 				BCC599B71BC40AB80004E1A7 /* AppDelegate.m in Sources */,

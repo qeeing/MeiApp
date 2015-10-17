@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ABb-fz-bjX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ABb-fz-bjX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -136,7 +136,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容不能为空且两次密码需要相同" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRv-A3-VIG">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRv-A3-VIG">
                                 <rect key="frame" x="33" y="368" width="255" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="255" id="FSr-Xz-v7Y"/>
@@ -200,7 +200,7 @@
         <!--填写店铺资料-->
         <scene sceneID="6Td-vW-GOJ">
             <objects>
-                <viewController title="填写店铺资料" id="ci1-dV-DJ2" sceneMemberID="viewController">
+                <viewController title="填写店铺资料" id="ci1-dV-DJ2" customClass="ShopUploadViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="emS-9L-Ba8"/>
                         <viewControllerLayoutGuide type="bottom" id="wzx-rQ-mGk"/>
@@ -209,25 +209,15 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="上传税务登记扫描证件" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDK-hs-l1z">
-                                <rect key="frame" x="36" y="280" width="249" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="上传营业执照" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GEp-in-rMg">
-                                <rect key="frame" x="36" y="230" width="249" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05S-Q9-jBB">
                                 <rect key="frame" x="36" y="330" width="249" height="30"/>
-                                <color key="backgroundColor" red="0.14509804549999999" green="0.73333334920000004" blue="0.85490202900000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="确认并注册">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zrE-oh-dzm" kind="show" id="Z3c-IB-XgD"/>
+                                    <segue destination="zrE-oh-dzm" kind="show" identifier="shopUploadSegueId" id="Z3c-IB-XgD"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店铺名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PbQ-q8-Jzf">
@@ -235,44 +225,69 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKJ-Sb-y9l">
+                                <rect key="frame" x="36" y="233" width="249" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="上传营业执照">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2a-Ri-8lv">
+                                <rect key="frame" x="36" y="281" width="249" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="上传税务登记扫描证件">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiE-BS-xg8">
+                                <rect key="frame" x="36" y="383" width="249" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.3058823645" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="SDK-hs-l1z" secondAttribute="leading" id="4wz-Ce-OHU"/>
+                            <constraint firstItem="s2a-Ri-8lv" firstAttribute="leading" secondItem="PbQ-q8-Jzf" secondAttribute="leading" id="0GH-zr-vwM"/>
+                            <constraint firstItem="CiE-BS-xg8" firstAttribute="top" secondItem="05S-Q9-jBB" secondAttribute="bottom" constant="23" id="4ks-Fp-hkI"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="width" secondItem="05S-Q9-jBB" secondAttribute="width" id="5Kr-LK-wwL"/>
-                            <constraint firstItem="GEp-in-rMg" firstAttribute="leading" secondItem="SDK-hs-l1z" secondAttribute="leading" id="BNA-ci-WdH"/>
+                            <constraint firstItem="s2a-Ri-8lv" firstAttribute="width" secondItem="PbQ-q8-Jzf" secondAttribute="width" id="7bV-3N-VLZ"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="top" secondItem="emS-9L-Ba8" secondAttribute="bottom" constant="62" id="Esh-XG-riv"/>
-                            <constraint firstItem="GEp-in-rMg" firstAttribute="top" secondItem="emS-9L-Ba8" secondAttribute="bottom" constant="235" id="T4o-Hu-O7s"/>
+                            <constraint firstItem="CiE-BS-xg8" firstAttribute="leading" secondItem="PbQ-q8-Jzf" secondAttribute="leading" id="Iok-Po-sfU"/>
+                            <constraint firstItem="CiE-BS-xg8" firstAttribute="width" secondItem="PbQ-q8-Jzf" secondAttribute="width" id="LVW-LF-3bh"/>
+                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="05S-Q9-jBB" secondAttribute="leading" id="PjS-xz-0Ag"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="emS-9L-Ba8" secondAttribute="bottom" constant="30" id="UXg-NU-kre"/>
-                            <constraint firstItem="SDK-hs-l1z" firstAttribute="top" secondItem="GEp-in-rMg" secondAttribute="bottom" constant="20" id="fHu-df-vsd"/>
+                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="ZKJ-Sb-y9l" secondAttribute="leading" id="bSG-ic-F7O"/>
+                            <constraint firstItem="ZKJ-Sb-y9l" firstAttribute="top" secondItem="PbQ-q8-Jzf" secondAttribute="bottom" constant="23" id="e9p-dq-GkM"/>
                             <constraint firstItem="wzx-rQ-mGk" firstAttribute="top" secondItem="05S-Q9-jBB" secondAttribute="bottom" constant="208" id="hPS-yO-Fcw"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="PBx-JY-eSv" secondAttribute="leadingMargin" constant="20" id="hy0-8K-0QH"/>
-                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="width" secondItem="GEp-in-rMg" secondAttribute="width" id="mD0-HP-olO"/>
-                            <constraint firstItem="SDK-hs-l1z" firstAttribute="top" secondItem="emS-9L-Ba8" secondAttribute="bottom" constant="297" id="oJI-SA-ExO"/>
+                            <constraint firstItem="05S-Q9-jBB" firstAttribute="top" secondItem="s2a-Ri-8lv" secondAttribute="bottom" constant="19" id="lBw-o9-jZN"/>
+                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="width" secondItem="ZKJ-Sb-y9l" secondAttribute="width" id="nMW-6V-tuc"/>
+                            <constraint firstItem="CiE-BS-xg8" firstAttribute="width" secondItem="PbQ-q8-Jzf" secondAttribute="width" id="ncG-IP-LJJ"/>
+                            <constraint firstItem="s2a-Ri-8lv" firstAttribute="top" secondItem="ZKJ-Sb-y9l" secondAttribute="bottom" constant="18" id="nif-Oz-4Af"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="05S-Q9-jBB" secondAttribute="leading" id="pPi-hC-Qhq"/>
-                            <constraint firstItem="05S-Q9-jBB" firstAttribute="leading" secondItem="SDK-hs-l1z" secondAttribute="leading" id="qHc-PF-hxi"/>
+                            <constraint firstItem="wzx-rQ-mGk" firstAttribute="top" secondItem="CiE-BS-xg8" secondAttribute="bottom" constant="169" id="pr5-cz-zf4"/>
                             <constraint firstItem="05S-Q9-jBB" firstAttribute="top" secondItem="emS-9L-Ba8" secondAttribute="bottom" constant="364" id="qnQ-Ms-NzI"/>
-                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="width" secondItem="SDK-hs-l1z" secondAttribute="width" id="sbl-Ic-Rit"/>
-                            <constraint firstItem="GEp-in-rMg" firstAttribute="top" secondItem="PbQ-q8-Jzf" secondAttribute="bottom" constant="20" id="u8k-zT-x5n"/>
-                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="GEp-in-rMg" secondAttribute="leading" id="uiy-sd-oIg"/>
-                            <constraint firstItem="05S-Q9-jBB" firstAttribute="top" secondItem="SDK-hs-l1z" secondAttribute="bottom" constant="20" id="xhj-hP-1UX"/>
-                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="GEp-in-rMg" secondAttribute="leading" id="zEQ-Oh-SMx"/>
+                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="width" secondItem="05S-Q9-jBB" secondAttribute="width" id="s9Q-rq-dUN"/>
+                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="ZKJ-Sb-y9l" secondAttribute="leading" id="vL5-tH-caA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PbQ-q8-Jzf" secondAttribute="trailing" constant="19" id="zKT-rT-TyJ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="4wz-Ce-OHU"/>
                                 <exclude reference="Esh-XG-riv"/>
                                 <exclude reference="pPi-hC-Qhq"/>
-                                <exclude reference="uiy-sd-oIg"/>
-                                <exclude reference="T4o-Hu-O7s"/>
-                                <exclude reference="oJI-SA-ExO"/>
                                 <exclude reference="qnQ-Ms-NzI"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="填写店铺资料" id="jBT-k4-4mY"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="alertLabel" destination="CiE-BS-xg8" id="XHm-LD-tS3"/>
+                        <outlet property="shopName" destination="PbQ-q8-Jzf" id="U0j-BQ-Q8l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cce-vA-5Fu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
