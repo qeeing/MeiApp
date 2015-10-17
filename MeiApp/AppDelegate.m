@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <QuartzCore/QuartzCore.h> 
+#import "RegisterViewController.h"
+#import "ManagerViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +20,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self AppAppearance];
+    
     return YES;
+}
+
+- (void)AppAppearance
+{
+    //导航栏
+    [UINavigationBar appearance].tintColor = AppColor;
+    //按钮
+    [UIButton appearance].backgroundColor = AppColor;
+    [UIButton appearanceWhenContainedIn:[RegisterViewController class], nil].backgroundColor = [UIColor whiteColor];
+    [UIButton appearanceWhenContainedIn:[ManagerViewController class], nil].backgroundColor = [UIColor whiteColor];
+    [UIButton appearance].layer.cornerRadius = 8;
+    [UIButton appearance].layer.masksToBounds = YES;
+    //VC 背景色
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
