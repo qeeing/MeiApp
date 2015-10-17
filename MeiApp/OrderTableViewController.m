@@ -1,5 +1,5 @@
 //
-//  QZTableViewBaseController.m
+//  OrderTableViewController.m
 //  MeiApp
 //
 //  Created by QianLei on 15/10/11.
@@ -11,8 +11,6 @@
 #import "OrderTableViewCell.h"
 
 @interface OrderTableViewController ()<OrderCellDelegate>
-
-@property (nonatomic, strong)NSArray *dataArray;
 
 @end
 

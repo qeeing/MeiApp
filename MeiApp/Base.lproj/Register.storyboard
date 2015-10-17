@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ABb-fz-bjX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ABb-fz-bjX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,14 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FirstScreen" translatesAutoresizingMaskIntoConstraints="NO" id="ezK-XK-dK5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEW-Tc-AVh">
                                 <rect key="frame" x="0.0" y="483" width="320" height="54"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyl-hg-V2R">
                                         <rect key="frame" x="17" y="7" width="137" height="39"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="登录">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.98431372549019602" green="0.11764705882352941" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -33,9 +36,9 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plm-F7-KqU">
                                         <rect key="frame" x="167" y="7" width="138" height="39"/>
-                                        <color key="backgroundColor" red="0.92549026010000002" green="0.61568629740000003" blue="0.37647062539999998" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="注册">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.98431372549019602" green="0.11372549019607843" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -43,7 +46,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="plm-F7-KqU" firstAttribute="leading" secondItem="lyl-hg-V2R" secondAttribute="trailing" constant="13" id="AMm-a2-Hgv"/>
                                     <constraint firstAttribute="trailing" secondItem="plm-F7-KqU" secondAttribute="trailing" constant="15" id="CYO-Zh-555"/>
@@ -57,26 +60,33 @@
                                     <constraint firstAttribute="bottom" secondItem="lyl-hg-V2R" secondAttribute="bottom" constant="8" id="rjK-EZ-7r7"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ezK-XK-dK5">
-                                <rect key="frame" x="40" y="50" width="240" height="406"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ezK-XK-dK5" secondAttribute="trailing" id="2VU-aO-LTe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ezK-XK-dK5" secondAttribute="trailing" constant="24" id="3jX-tc-Cc9"/>
                             <constraint firstItem="ezK-XK-dK5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="50" id="4er-w6-6HB"/>
+                            <constraint firstItem="ezK-XK-dK5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="AcS-0X-x93"/>
                             <constraint firstItem="eEW-Tc-AVh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="FoJ-AG-NPM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ezK-XK-dK5" secondAttribute="trailing" constant="24" id="IyO-4V-aHy"/>
                             <constraint firstItem="eEW-Tc-AVh" firstAttribute="top" secondItem="ezK-XK-dK5" secondAttribute="bottom" constant="27" id="P65-UX-HXm"/>
+                            <constraint firstItem="eEW-Tc-AVh" firstAttribute="top" secondItem="ezK-XK-dK5" secondAttribute="bottom" constant="-85" id="RNz-Td-Hyc"/>
                             <constraint firstItem="ezK-XK-dK5" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-14" id="S5Y-ln-yvU"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="eEW-Tc-AVh" secondAttribute="bottom" constant="31" id="Tp0-37-KYK"/>
                             <constraint firstItem="ezK-XK-dK5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="24" id="b6I-xb-xQZ"/>
+                            <constraint firstAttribute="bottom" secondItem="ezK-XK-dK5" secondAttribute="bottom" id="mNk-e9-WTf"/>
+                            <constraint firstItem="ezK-XK-dK5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="njC-bv-ddL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eEW-Tc-AVh" secondAttribute="trailing" constant="-16" id="wgU-6S-81g"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="3jX-tc-Cc9"/>
+                                <exclude reference="4er-w6-6HB"/>
                                 <exclude reference="IyO-4V-aHy"/>
                                 <exclude reference="S5Y-ln-yvU"/>
+                                <exclude reference="b6I-xb-xQZ"/>
+                                <exclude reference="P65-UX-HXm"/>
+                                <exclude reference="RNz-Td-Hyc"/>
                             </mask>
                         </variation>
                     </view>
@@ -211,7 +221,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05S-Q9-jBB">
                                 <rect key="frame" x="36" y="330" width="249" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14509804549999999" green="0.73333334920000004" blue="0.85490202900000001" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="确认并注册">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -344,6 +354,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1.jpg" width="480" height="800"/>
+        <image name="FirstScreen" width="320" height="480"/>
     </resources>
 </document>

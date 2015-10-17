@@ -10,4 +10,6 @@
 
 @interface QZBaseTableViewController : UITableViewController
 
+@property (nonatomic, strong)NSArray *dataArray;
+
 @end
