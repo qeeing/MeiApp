@@ -16,14 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //按钮颜色
-    self.navigationController.navigationBar.tintColor = AppColor;
-    //标题颜色
-//    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : AppColor };
-    //整个颜色
-//    self.navigationController.navigationBar.barTintColor = AppColor;
-    
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

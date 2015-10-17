@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
 
     //按钮颜色
-    self.navigationController.navigationBar.tintColor = AppColor;
+//    self.navigationController.navigationBar.tintColor = AppColor;
     //标题颜色
 //    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : AppColor };
     //整个颜色
