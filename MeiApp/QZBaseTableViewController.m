@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self layoutForTableView];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -42,8 +44,30 @@
     
     //cell 分割线缩进
     //    self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     //不显示空白 cell
     self.tableView.tableFooterView = [[UIView alloc] init];
+}
+
+- (void)refreshControlHandler
+{
+    [self.refreshControl endRefreshing];
+    
+    [self fetchDataFromServer];
+    
+    [self.tableView reloadData];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView*)scrollView
+{
+    if( self.refreshControl.isRefreshing ) {
+        [self refreshControlHandler];
+    }
+}
+
+- (void)fetchDataFromServer;
+{
+    //子类实现
 }
 
 - (void)didReceiveMemoryWarning {
