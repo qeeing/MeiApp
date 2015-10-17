@@ -24,24 +24,42 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)layoutForTableView;
+{
+    UIColor *refreshColor = AppColor;
+    
+    // 下拉刷新
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    // 设置标题
+    NSAttributedString *refreshTitle = [[NSAttributedString alloc]
+                                        initWithString: @"下拉刷新"
+                                        attributes:@{NSForegroundColorAttributeName : refreshColor }];
+    refreshControl.attributedTitle = refreshTitle;
+    refreshControl.tintColor = refreshColor;
+    //给UIRefreshControl加入背景色，即使是clearColor，刷新标识将会随着下拉逐渐从上部出现
+    refreshControl.backgroundColor = [UIColor clearColor];
+    self.refreshControl = refreshControl;
+    
+    //cell 分割线缩进
+    //    self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    //不显示空白 cell
+    self.tableView.tableFooterView = [[UIView alloc] init];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-//#pragma mark - Table view data source
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete method implementation.
-//    // Return the number of rows in the section.
-//    return 0;
-//}
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,13 +71,15 @@
 }
 */
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
     return YES;
 }
-*/
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"删除";
+}
 
 /*
 // Override to support editing the table view.

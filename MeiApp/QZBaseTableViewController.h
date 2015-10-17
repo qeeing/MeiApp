@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong)NSArray *dataArray;
 
+- (void)layoutForTableView;
+
 @end

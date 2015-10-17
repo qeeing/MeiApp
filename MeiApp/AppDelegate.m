@@ -39,7 +39,8 @@
     //按钮圆角
     [UIButton appearance].cornerRadius = 4;
     //VC 背景色
-
+    [QZBaseView appearance].backgroundColor = VCBackgroudColor;
+    [QZBaseTableView appearance].backgroundColor = VCBackgroudColor;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
