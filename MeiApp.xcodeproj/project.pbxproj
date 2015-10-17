@@ -14,6 +14,7 @@
 		2D8891121BD203B600C84980 /* ShopUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8891111BD203B600C84980 /* ShopUploadViewController.m */; };
 		BC140C631BCFF05F00ED4251 /* QZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */; };
 		BC140C661BCFF09000ED4251 /* QZBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */; };
+		BC3E97071BD1F88300FE9D54 /* UIButton+QZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */; };
 		BC6A8E931BC82E9F00B1297D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6A8E921BC82E9F00B1297D /* Login.storyboard */; };
 		BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A8E951BC8325900B1297D /* LoginViewController.m */; };
 		BCBBB73C1BC93EE400A83B89 /* RegisterDoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */; };
@@ -59,6 +60,8 @@
 		BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseViewController.m; sourceTree = "<group>"; };
 		BC140C641BCFF09000ED4251 /* QZBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZBaseTableViewController.h; sourceTree = "<group>"; };
 		BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseTableViewController.m; sourceTree = "<group>"; };
+		BC3E97051BD1F88300FE9D54 /* UIButton+QZAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+QZAppearance.h"; sourceTree = "<group>"; };
+		BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+QZAppearance.m"; sourceTree = "<group>"; };
 		BC6A8E921BC82E9F00B1297D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC6A8E941BC8325900B1297D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BC6A8E951BC8325900B1297D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				BCBBB74D1BC995E900A83B89 /* CALayer+Additions.m */,
 				BCBBB74E1BC995E900A83B89 /* UIView+frameAdjust.h */,
 				BCBBB74F1BC995E900A83B89 /* UIView+frameAdjust.m */,
+				BC3E97051BD1F88300FE9D54 /* UIButton+QZAppearance.h */,
+				BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -423,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3E97071BD1F88300FE9D54 /* UIButton+QZAppearance.m in Sources */,
 				2D88910F1BD121FA00C84980 /* OrderTableViewController.m in Sources */,
 				BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */,
 				BCBBB7581BC9978600A83B89 /* SystemInfo.m in Sources */,
