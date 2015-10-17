@@ -13,5 +13,6 @@
 @property (nonatomic, strong)NSArray *dataArray;
 
 - (void)layoutForTableView;
+- (void)fetchDataFromServer;
 
 @end
