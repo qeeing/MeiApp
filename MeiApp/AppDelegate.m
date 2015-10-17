@@ -11,6 +11,11 @@
 #import "RegisterViewController.h"
 #import "ManagerViewController.h"
 #import "UIButton+QZAppearance.h"
+#import "LoginViewController.h"
+#import "QZNormalLabel.h"
+#import "QZStateLabel.h"
+#import "QZSubStateLabel.h"
+#import "QZClearButton.h"
 
 @interface AppDelegate ()
 
@@ -28,19 +33,32 @@
 
 - (void)AppAppearance
 {
+    //View 背景色
+    [QZBaseView appearance].backgroundColor = GrayColorForBackgroud;
+    [QZBaseTableView appearance].backgroundColor = GrayColorForBackgroud;
+    
     //导航栏
-    [UINavigationBar appearance].tintColor = AppColor;
+    [UINavigationBar appearance].tintColor = RedColorForNavigationBar;
+    
     //按钮
-    [UIButton appearance].backgroundColor = AppColor;
+    [UIButton appearance].backgroundColor = PinkColorForApp;
+    [QZClearButton appearance].backgroundColor = [UIColor clearColor];
+    //TODO:按钮按下
+//    [[UIButton appearance] setBackgroundImage:nil forState:UIControlStateSelected];
     [UIButton appearanceWhenContainedIn:[RegisterViewController class], nil].backgroundColor = [UIColor whiteColor];
     [UIButton appearanceWhenContainedIn:[ManagerViewController class], nil].backgroundColor = [UIColor whiteColor];
-//    [UIButton appearanceWhenContainedIn:[UIViewController class], nil].backgroundColor = AppColor;
-
     //按钮圆角
     [UIButton appearance].cornerRadius = 4;
-    //VC 背景色
-    [QZBaseView appearance].backgroundColor = VCBackgroudColor;
-    [QZBaseTableView appearance].backgroundColor = VCBackgroudColor;
+    
+    //TextField
+    [UILabel appearanceWhenContainedIn:[UITextField class], nil].textColor = GrayColorForFont;
+    [UITextField appearanceWhenContainedIn:[LoginViewController class], nil].backgroundColor = GrayColorForBackgroud;
+    
+    //Label
+    [QZNormalLabel appearance].textColor = BlackColorForLabel;
+    [QZStateLabel appearance].textColor = YellowColorForLabel;
+    [QZSubStateLabel appearance].textColor = GrayColorForFont;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
