@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="top" id="Ywc-IU-7zw"/>
                         <viewControllerLayoutGuide type="bottom" id="bxp-6s-6cm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="y5W-DR-8dW">
+                    <view key="view" contentMode="scaleToFill" id="y5W-DR-8dW" customClass="QZBaseView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -90,7 +90,7 @@
                         <viewControllerLayoutGuide type="top" id="f5g-uN-iFh"/>
                         <viewControllerLayoutGuide type="bottom" id="uvL-JW-2mH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6y6-ni-Wjm">
+                    <view key="view" contentMode="scaleToFill" id="6y6-ni-Wjm" customClass="QZBaseView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -116,7 +116,7 @@
                         <viewControllerLayoutGuide type="top" id="xc3-dh-d41"/>
                         <viewControllerLayoutGuide type="bottom" id="f3l-Vm-7CA"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UhD-5D-LUv">
+                    <view key="view" contentMode="scaleToFill" id="UhD-5D-LUv" customClass="QZBaseView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,7 +134,7 @@
         <scene sceneID="NCb-H2-wzK">
             <objects>
                 <tableViewController title="订单管理" id="N6X-Ia-Rqr" customClass="OrderTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" id="wDh-Cu-oeW">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" id="wDh-Cu-oeW" customClass="QZBaseTableView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -236,16 +236,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <state key="normal" title="关闭订单">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
-                                                    <color key="value" red="0.035294119268655777" green="0.019607843831181526" blue="0.062745101749897003" alpha="1" colorSpace="deviceRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                    <real key="value" value="0.29999999999999999"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
                                             <variation key="default">
                                                 <mask key="constraints">
                                                     <exclude reference="AtY-Od-aSb"/>
@@ -263,16 +256,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <state key="normal" title="完成订单">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
-                                                    <color key="value" red="0.03529411927" green="0.019607843829999999" blue="0.062745101750000004" alpha="1" colorSpace="deviceRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                    <real key="value" value="0.29999999999999999"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="completeOrderButtonPressed:" destination="N9K-LY-Hq3" eventType="touchUpInside" id="tIr-aL-LKo"/>
                                             </connections>
@@ -357,7 +343,7 @@
         <scene sceneID="lzN-IM-FKb">
             <objects>
                 <tableViewController title="服务信息" id="75Z-Qt-BJe" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" id="Aot-Z0-6gL">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" id="Aot-Z0-6gL" customClass="QZBaseTableView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -398,7 +384,7 @@
                         <viewControllerLayoutGuide type="top" id="J8J-UX-s7j"/>
                         <viewControllerLayoutGuide type="bottom" id="aYy-LA-o5H"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ciw-ox-uN1">
+                    <view key="view" contentMode="scaleToFill" id="Ciw-ox-uN1" customClass="QZBaseView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -437,11 +423,11 @@
                         <viewControllerLayoutGuide type="top" id="oMI-Bi-hcM"/>
                         <viewControllerLayoutGuide type="bottom" id="Pv1-op-Tkj"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="whQ-eb-MSV">
+                    <view key="view" contentMode="scaleToFill" id="whQ-eb-MSV" customClass="QZBaseView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DyG-RU-r2g">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DyG-RU-r2g" customClass="QZBaseView">
                                 <rect key="frame" x="36" y="160" width="248" height="248"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2w-qw-dlS">
