@@ -21,9 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.navigationController.navigationBar.tintColor = AppColor;
-    
-    [self appearanceForTableView];
+    [self layoutForTableView];
     
     [self fetchDataFromServer];
     
@@ -32,28 +30,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 //     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)appearanceForTableView
-{
-    UIColor *refreshColor = AppColor;
-
-    // 下拉刷新
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    // 设置标题
-    NSAttributedString *refreshTitle = [[NSAttributedString alloc]
-                                        initWithString: @"下拉刷新"
-                                        attributes:@{NSForegroundColorAttributeName : refreshColor }];
-    refreshControl.attributedTitle = refreshTitle;
-    refreshControl.tintColor = refreshColor;
-    //给UIRefreshControl加入背景色，即使是clearColor，刷新标识将会随着下拉逐渐从上部出现
-    refreshControl.backgroundColor = [UIColor clearColor];
-    self.refreshControl = refreshControl;
-    
-    //cell 分割线缩进
-    //    self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    //不显示空白 cell
-    self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
 - (void)refreshControlHandler
@@ -99,14 +75,6 @@
 
 #pragma mark - Table view data source & Delegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArray.count;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     OrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"orderCellId" forIndexPath:indexPath];
     cell.delegate = self;
@@ -114,11 +82,6 @@
     [cell orderCellInfo:self.dataArray[indexPath.row][@"ordphone"]];
     
     return cell;
-}
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return YES;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
