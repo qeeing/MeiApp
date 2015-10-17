@@ -16,6 +16,7 @@
 #define IOS_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
 #define RGBA(a, b, c, d) [UIColor colorWithRed:(a / 255.0f) green:(b / 255.0f) blue:(c / 255.0f) alpha:d]
+#define QZRGB(a, b, c) RGBA(a, b, c, 1)
 
 //是否为空或是[NSNull null]
 #define NotNilAndNull(_ref)  (((_ref) != nil) && (![(_ref) isEqual:[NSNull null]]))
