@@ -16,7 +16,6 @@
 		BC6A8E931BC82E9F00B1297D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6A8E921BC82E9F00B1297D /* Login.storyboard */; };
 		BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A8E951BC8325900B1297D /* LoginViewController.m */; };
 		BCBBB73C1BC93EE400A83B89 /* RegisterDoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */; };
-		BCBBB7461BC993A600A83B89 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCBBB7451BC993A600A83B89 /* 1.jpg */; };
 		BCBBB7501BC995E900A83B89 /* UIImage+QZCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB74B1BC995E900A83B89 /* UIImage+QZCompress.m */; };
 		BCBBB7511BC995E900A83B89 /* CALayer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB74D1BC995E900A83B89 /* CALayer+Additions.m */; };
 		BCBBB7521BC995E900A83B89 /* UIView+frameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB74F1BC995E900A83B89 /* UIView+frameAdjust.m */; };
@@ -62,7 +61,6 @@
 		BC6A8E951BC8325900B1297D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BCBBB73A1BC93EE400A83B89 /* RegisterDoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterDoneViewController.h; sourceTree = "<group>"; };
 		BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterDoneViewController.m; sourceTree = "<group>"; };
-		BCBBB7451BC993A600A83B89 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		BCBBB74A1BC995E900A83B89 /* UIImage+QZCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+QZCompress.h"; sourceTree = "<group>"; };
 		BCBBB74B1BC995E900A83B89 /* UIImage+QZCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QZCompress.m"; sourceTree = "<group>"; };
 		BCBBB74C1BC995E900A83B89 /* CALayer+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Additions.h"; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 		BCBBB7441BC9936C00A83B89 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BCBBB7451BC993A600A83B89 /* 1.jpg */,
 				BC0599511BCFF3F3003622DC /* UIConstant.h */,
 			);
 			path = Resources;
@@ -371,7 +368,6 @@
 				BCC599BD1BC40AB80004E1A7 /* Register.storyboard in Resources */,
 				BCC599C21BC40AB80004E1A7 /* LaunchScreen.xib in Resources */,
 				BCC599BF1BC40AB80004E1A7 /* Images.xcassets in Resources */,
-				BCBBB7461BC993A600A83B89 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
