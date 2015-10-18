@@ -46,9 +46,9 @@
 #import "UserInfo.h"
 #import "UIConstant.h"
 
-#import "QZBaseViewController.h"
-#import "QZBaseTableViewController.h"
 #import "QZBaseView.h"
 #import "QZBaseTableView.h"
+#import "QZBaseViewController.h"
+#import "QZBaseTableViewController.h"
 
 #endif

@@ -28,7 +28,7 @@
 
 - (void)layoutForTableView;
 {
-    UIColor *refreshColor = AppColor;
+    UIColor *refreshColor = RedColorForNavigationBar;
     
     // 下拉刷新
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
@@ -43,10 +43,19 @@
     self.refreshControl = refreshControl;
     
     //cell 分割线缩进
-    //    self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    //Only left and right insets are honored.
+    self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);//上、左、下、右
+    // 设置毛玻璃
+//    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+//    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:blurEffect];
+//    self.tableView.separatorEffect = vibrancyEffect;
+
     //不显示空白 cell
     self.tableView.tableFooterView = [[UIView alloc] init];
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(5, 0, 5, 0);
 }
 
 - (void)refreshControlHandler
