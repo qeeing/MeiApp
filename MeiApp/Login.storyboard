@@ -92,7 +92,7 @@
         <!--店铺信息-->
         <scene sceneID="SYS-cK-gJ1">
             <objects>
-                <tableViewController title="店铺信息" id="AEt-wW-xFe" customClass="QZBaseTableViewController" sceneMemberID="viewController">
+                <tableViewController title="店铺信息" id="AEt-wW-xFe" customClass="ShopDetailTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8jJ-PV-Wnx" customClass="QZBaseTableView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -582,8 +582,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="tvW-iD-Qc0"/>
                                         <exclude reference="HCd-ET-D1K"/>
+                                        <exclude reference="tvW-iD-Qc0"/>
                                     </mask>
                                 </variation>
                             </imageView>
