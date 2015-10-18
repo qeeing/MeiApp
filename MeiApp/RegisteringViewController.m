@@ -23,8 +23,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self leftViewImageName:@"Email" forTextField:self.userNameTextField];
+    [self leftViewImageName:@"Password" forTextField:self.passwordTextField];
+    [self leftViewImageName:@"Password2" forTextField:self.password2TextField];
+    
 }
+
+- (void) leftViewImageName:(NSString *)ImageName forTextField:(UITextField *)TextFieldName{
+    UIImageView *leftView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:ImageName]];
+    leftView.frame = CGRectMake(0.0, 0.0, leftView.image.size.width+10.0, leftView.image.size.height);
+    leftView.contentMode = UIViewContentModeCenter;
+    TextFieldName.leftView = leftView;
+    TextFieldName.leftViewMode = UITextFieldViewModeAlways;
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
