@@ -17,6 +17,10 @@
 		BC3E97071BD1F88300FE9D54 /* UIButton+QZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */; };
 		BC3E970A1BD20D7900FE9D54 /* QZBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E97091BD20D7900FE9D54 /* QZBaseView.m */; };
 		BC3E97101BD2141B00FE9D54 /* QZBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E970F1BD2141B00FE9D54 /* QZBaseTableView.m */; };
+		BC3E97131BD217F600FE9D54 /* ServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E97121BD217F600FE9D54 /* ServiceTableViewController.m */; };
+		BC3E97161BD2194E00FE9D54 /* ShopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E97151BD2194E00FE9D54 /* ShopDetailViewController.m */; };
+		BC3E97191BD2196400FE9D54 /* ShopEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E97181BD2196400FE9D54 /* ShopEditViewController.m */; };
+		BC3E971C1BD2198300FE9D54 /* ServiceUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E971B1BD2198300FE9D54 /* ServiceUploadViewController.m */; };
 		BC6A8E931BC82E9F00B1297D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6A8E921BC82E9F00B1297D /* Login.storyboard */; };
 		BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A8E951BC8325900B1297D /* LoginViewController.m */; };
 		BCBBB73C1BC93EE400A83B89 /* RegisterDoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */; };
@@ -68,6 +72,14 @@
 		BC3E97091BD20D7900FE9D54 /* QZBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseView.m; sourceTree = "<group>"; };
 		BC3E970E1BD2141B00FE9D54 /* QZBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZBaseTableView.h; sourceTree = "<group>"; };
 		BC3E970F1BD2141B00FE9D54 /* QZBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseTableView.m; sourceTree = "<group>"; };
+		BC3E97111BD217F600FE9D54 /* ServiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceTableViewController.h; sourceTree = "<group>"; };
+		BC3E97121BD217F600FE9D54 /* ServiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceTableViewController.m; sourceTree = "<group>"; };
+		BC3E97141BD2194E00FE9D54 /* ShopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopDetailViewController.h; sourceTree = "<group>"; };
+		BC3E97151BD2194E00FE9D54 /* ShopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopDetailViewController.m; sourceTree = "<group>"; };
+		BC3E97171BD2196400FE9D54 /* ShopEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopEditViewController.h; sourceTree = "<group>"; };
+		BC3E97181BD2196400FE9D54 /* ShopEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopEditViewController.m; sourceTree = "<group>"; };
+		BC3E971A1BD2198300FE9D54 /* ServiceUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceUploadViewController.h; sourceTree = "<group>"; };
+		BC3E971B1BD2198300FE9D54 /* ServiceUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceUploadViewController.m; sourceTree = "<group>"; };
 		BC6A8E921BC82E9F00B1297D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC6A8E941BC8325900B1297D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BC6A8E951BC8325900B1297D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -143,7 +155,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BC140C671BCFF0FC00ED4251 /* BaseViewController */ = {
+		BC140C671BCFF0FC00ED4251 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
 				BC140C611BCFF05F00ED4251 /* QZBaseViewController.h */,
@@ -155,7 +167,47 @@
 				BC3E970E1BD2141B00FE9D54 /* QZBaseTableView.h */,
 				BC3E970F1BD2141B00FE9D54 /* QZBaseTableView.m */,
 			);
-			name = BaseViewController;
+			name = BaseView;
+			sourceTree = "<group>";
+		};
+		BC3E971D1BD219A500FE9D54 /* LoginSucceed */ = {
+			isa = PBXGroup;
+			children = (
+				BC6A8E921BC82E9F00B1297D /* Login.storyboard */,
+				BCBBB7641BCA0A7D00A83B89 /* ManagerViewController.h */,
+				BCBBB7651BCA0A7D00A83B89 /* ManagerViewController.m */,
+				BC3E97141BD2194E00FE9D54 /* ShopDetailViewController.h */,
+				BC3E97151BD2194E00FE9D54 /* ShopDetailViewController.m */,
+				BC3E97171BD2196400FE9D54 /* ShopEditViewController.h */,
+				BC3E97181BD2196400FE9D54 /* ShopEditViewController.m */,
+				BCBBB7671BCA0E9D00A83B89 /* OrderTableViewController.h */,
+				BCBBB7681BCA0E9D00A83B89 /* OrderTableViewController.m */,
+				BCBE7F321BCE9D6900A7AABA /* OrderTableViewCell.h */,
+				BCBE7F331BCE9D6900A7AABA /* OrderTableViewCell.m */,
+				BC3E97111BD217F600FE9D54 /* ServiceTableViewController.h */,
+				BC3E97121BD217F600FE9D54 /* ServiceTableViewController.m */,
+				BC3E971A1BD2198300FE9D54 /* ServiceUploadViewController.h */,
+				BC3E971B1BD2198300FE9D54 /* ServiceUploadViewController.m */,
+				BC6A8E941BC8325900B1297D /* LoginViewController.h */,
+				BC6A8E951BC8325900B1297D /* LoginViewController.m */,
+			);
+			name = LoginSucceed;
+			sourceTree = "<group>";
+		};
+		BC3E971E1BD219B300FE9D54 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				BCC599BB1BC40AB80004E1A7 /* Register.storyboard */,
+				2D424F971BC8F7C000347143 /* RegisterViewController.h */,
+				2D424F981BC8F7C000347143 /* RegisterViewController.m */,
+				2D3F458C1BCFF401005F531B /* RegisteringViewController.h */,
+				2D3F458D1BCFF401005F531B /* RegisteringViewController.m */,
+				2D8891101BD203B600C84980 /* ShopUploadViewController.h */,
+				2D8891111BD203B600C84980 /* ShopUploadViewController.m */,
+				BCBBB73A1BC93EE400A83B89 /* RegisterDoneViewController.h */,
+				BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */,
+			);
+			name = Register;
 			sourceTree = "<group>";
 		};
 		BCBBB7441BC9936C00A83B89 /* Resources */ = {
@@ -251,25 +303,9 @@
 				BCBBB7551BC9977B00A83B89 /* Common */,
 				BCBBB7531BC9972A00A83B89 /* Modal */,
 				BCBBB7481BC995A200A83B89 /* Category */,
-				BC140C671BCFF0FC00ED4251 /* BaseViewController */,
-				BCC599BB1BC40AB80004E1A7 /* Register.storyboard */,
-				2D424F971BC8F7C000347143 /* RegisterViewController.h */,
-				2D424F981BC8F7C000347143 /* RegisterViewController.m */,
-				2D3F458C1BCFF401005F531B /* RegisteringViewController.h */,
-				2D3F458D1BCFF401005F531B /* RegisteringViewController.m */,
-				2D8891101BD203B600C84980 /* ShopUploadViewController.h */,
-				2D8891111BD203B600C84980 /* ShopUploadViewController.m */,
-				BCBBB73A1BC93EE400A83B89 /* RegisterDoneViewController.h */,
-				BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */,
-				BC6A8E921BC82E9F00B1297D /* Login.storyboard */,
-				BCBBB7641BCA0A7D00A83B89 /* ManagerViewController.h */,
-				BCBBB7651BCA0A7D00A83B89 /* ManagerViewController.m */,
-				BCBBB7671BCA0E9D00A83B89 /* OrderTableViewController.h */,
-				BCBBB7681BCA0E9D00A83B89 /* OrderTableViewController.m */,
-				BCBE7F321BCE9D6900A7AABA /* OrderTableViewCell.h */,
-				BCBE7F331BCE9D6900A7AABA /* OrderTableViewCell.m */,
-				BC6A8E941BC8325900B1297D /* LoginViewController.h */,
-				BC6A8E951BC8325900B1297D /* LoginViewController.m */,
+				BC140C671BCFF0FC00ED4251 /* BaseView */,
+				BC3E971E1BD219B300FE9D54 /* Register */,
+				BC3E971D1BD219A500FE9D54 /* LoginSucceed */,
 				BCC599BE1BC40AB80004E1A7 /* Images.xcassets */,
 				BCC599B11BC40AB80004E1A7 /* Supporting Files */,
 			);
@@ -438,7 +474,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3E971C1BD2198300FE9D54 /* ServiceUploadViewController.m in Sources */,
 				BC3E97071BD1F88300FE9D54 /* UIButton+QZAppearance.m in Sources */,
+				BC3E97131BD217F600FE9D54 /* ServiceTableViewController.m in Sources */,
 				2D88910F1BD121FA00C84980 /* OrderTableViewController.m in Sources */,
 				BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */,
 				BCBBB7581BC9978600A83B89 /* SystemInfo.m in Sources */,
@@ -453,7 +491,9 @@
 				BCBE7F341BCE9D6900A7AABA /* OrderTableViewCell.m in Sources */,
 				BCBBB7501BC995E900A83B89 /* UIImage+QZCompress.m in Sources */,
 				BC3E97101BD2141B00FE9D54 /* QZBaseTableView.m in Sources */,
+				BC3E97161BD2194E00FE9D54 /* ShopDetailViewController.m in Sources */,
 				2D424F991BC8F7C000347143 /* RegisterViewController.m in Sources */,
+				BC3E97191BD2196400FE9D54 /* ShopEditViewController.m in Sources */,
 				BCBBB7661BCA0A7D00A83B89 /* ManagerViewController.m in Sources */,
 				BCBBB7601BC999C900A83B89 /* UserInfo.m in Sources */,
 				BCBBB73C1BC93EE400A83B89 /* RegisterDoneViewController.m in Sources */,
