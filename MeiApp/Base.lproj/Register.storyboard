@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ABb-fz-bjX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ABb-fz-bjX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -26,7 +26,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyl-hg-V2R">
                                         <rect key="frame" x="17" y="7" width="137" height="39"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="登录">
+                                        <state key="normal" title="登    录">
                                             <color key="titleColor" red="0.98431372549019602" green="0.11764705882352941" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -37,7 +37,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plm-F7-KqU">
                                         <rect key="frame" x="167" y="7" width="138" height="39"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="注册">
+                                        <state key="normal" title="注    册">
                                             <color key="titleColor" red="0.98431372549019602" green="0.11372549019607843" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -105,7 +105,7 @@
                         <viewControllerLayoutGuide type="top" id="xoD-Xr-VPS"/>
                         <viewControllerLayoutGuide type="bottom" id="t5J-Wc-ymi"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="h5f-TO-j8f">
+                    <view key="view" contentMode="scaleToFill" id="h5f-TO-j8f" customClass="QZBaseView">
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -121,17 +121,17 @@
                                     <segue destination="ci1-dV-DJ2" kind="show" identifier="registerNextSegueId" id="1Oc-zT-Cqr"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5c-z7-x2e">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5c-z7-x2e">
                                 <rect key="frame" x="36" y="231" width="249" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="确认密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YIH-72-s3c">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="再次确认密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YIH-72-s3c">
                                 <rect key="frame" x="36" y="269" width="249" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QwH-Be-xxm">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QwH-Be-xxm">
                                 <rect key="frame" x="36" y="179" width="249" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -205,7 +205,7 @@
                         <viewControllerLayoutGuide type="top" id="emS-9L-Ba8"/>
                         <viewControllerLayoutGuide type="bottom" id="wzx-rQ-mGk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PBx-JY-eSv">
+                    <view key="view" contentMode="scaleToFill" id="PBx-JY-eSv" customClass="QZBaseView">
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -220,7 +220,7 @@
                                     <segue destination="zrE-oh-dzm" kind="show" identifier="shopUploadSegueId" id="Z3c-IB-XgD"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店铺名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PbQ-q8-Jzf">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入店铺名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PbQ-q8-Jzf">
                                 <rect key="frame" x="36" y="180" width="249" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -228,7 +228,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKJ-Sb-y9l">
                                 <rect key="frame" x="36" y="233" width="249" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="上传营业执照">
+                                <state key="normal" title="点击上传营业执照">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -236,7 +236,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2a-Ri-8lv">
                                 <rect key="frame" x="36" y="281" width="249" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="上传税务登记扫描证件">
+                                <state key="normal" title="点击上传税务登记扫描件">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -301,7 +301,7 @@
                         <viewControllerLayoutGuide type="top" id="LlK-RX-EOg"/>
                         <viewControllerLayoutGuide type="bottom" id="q7K-dg-2r4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2UV-hk-4x7">
+                    <view key="view" contentMode="scaleToFill" id="2UV-hk-4x7" customClass="QZBaseView">
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -338,7 +338,7 @@
                         <viewControllerLayoutGuide type="top" id="eK4-mm-9VH"/>
                         <viewControllerLayoutGuide type="bottom" id="317-If-65s"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fRp-AN-fTV">
+                    <view key="view" contentMode="scaleToFill" id="fRp-AN-fTV" customClass="QZBaseView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

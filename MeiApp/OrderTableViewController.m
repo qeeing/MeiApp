@@ -21,8 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self layoutForTableView];
-    
     [self fetchDataFromServer];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -32,21 +30,21 @@
 //     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)refreshControlHandler
-{
-    [self.refreshControl endRefreshing];
-    
-    [self fetchDataFromServer];
-    
-    [self.tableView reloadData];
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView*)scrollView
-{
-    if( self.refreshControl.isRefreshing ) {
-        [self refreshControlHandler];
-    }
-}
+//- (void)refreshControlHandler
+//{
+//    [self.refreshControl endRefreshing];
+//    
+//    [self fetchDataFromServer];
+//    
+//    [self.tableView reloadData];
+//}
+//
+//- (void)scrollViewDidEndDecelerating:(UIScrollView*)scrollView
+//{
+//    if( self.refreshControl.isRefreshing ) {
+//        [self refreshControlHandler];
+//    }
+//}
 
 /*
  "orders":[{"orderid":id,"sumprice":总价,"createtime"：创建时间," serviceid":," servicename":服务名称,"userid":," ordphone":," state": },{}]
