@@ -35,15 +35,41 @@
  */
 - (void)fetchDataFromServer;
 {
-    self.dataArray = @[@"店铺名称",@"地址",@"电话",@"营业时间",@"店铺描述"];
+    self.dataArray = @[@"店铺名称",@"地址",@"电话",@"营业时间",@"店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述"];
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row < self.dataArray.count - 1) {
+        return 44;
+    } else {
+//        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"shopIntroduceCellId"];
+//        cell.detailTextLabel.numberOfLines = 0;
+//        
+//        cell.detailTextLabel.text = self.dataArray[indexPath.row];
+//
+//        CGFloat height = [self heightForLabel:cell.detailTextLabel withText:cell.detailTextLabel.text];
+//        
+//        return height;
+        return 100;
+    }
+}
+
+//-(CGFloat)heightForLabel:(UILabel *)label withText:(NSString *)text{
+//    
+//    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:text attributes:@{NSFontAttributeName:label.font}];
+//    CGRect rect = [attributedText boundingRectWithSize:(CGSize){label.frame.size.width, CGFLOAT_MAX}
+//                                               options:NSStringDrawingUsesLineFragmentOrigin
+//                                               context:nil];
+//    
+//    return ceil(rect.size.height);
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ShopDetailCellId" forIndexPath:indexPath];
-    cell.textLabel.text = self.dataArray[indexPath.row];
+    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    
     cell.detailTextLabel.text = self.dataArray[indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:@"ShopIcon"];
     
     return cell;
 }

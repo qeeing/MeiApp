@@ -10,8 +10,6 @@
 
 @interface ShopIntroduceTableViewCell ()
 
-@property (weak, nonatomic) IBOutlet UILabel *ShopIntroduceLabel;
-
 @end
 
 @implementation ShopIntroduceTableViewCell
