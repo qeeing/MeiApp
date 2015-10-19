@@ -43,27 +43,22 @@
     if (indexPath.row < self.dataArray.count - 1) {
         return 44;
     } else {
-//        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"shopIntroduceCellId"];
-//        cell.detailTextLabel.numberOfLines = 0;
-//        
-//        cell.detailTextLabel.text = self.dataArray[indexPath.row];
-//
-//        CGFloat height = [self heightForLabel:cell.detailTextLabel withText:cell.detailTextLabel.text];
-//        
-//        return height;
-        return 100;
+        UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+        cell.detailTextLabel.text = self.dataArray[indexPath.row];
+        
+        CGFloat stringWidth = cell.detailTextLabel.attributedText.size.width + 5;
+        CGFloat labelWidth = [UIScreen mainScreen].bounds.size.width - 20;
+        
+        NSUInteger lineNums = 1;
+        if (stringWidth > labelWidth) {
+            lineNums = stringWidth / labelWidth + 1;
+        }
+        
+        CGFloat height = cell.detailTextLabel.frame.size.height * lineNums + cell.textLabel.frame.size.height + 20;
+        
+        return height > 44 ? height : 44;
     }
 }
-
-//-(CGFloat)heightForLabel:(UILabel *)label withText:(NSString *)text{
-//    
-//    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:text attributes:@{NSFontAttributeName:label.font}];
-//    CGRect rect = [attributedText boundingRectWithSize:(CGSize){label.frame.size.width, CGFLOAT_MAX}
-//                                               options:NSStringDrawingUsesLineFragmentOrigin
-//                                               context:nil];
-//    
-//    return ceil(rect.size.height);
-//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
