@@ -8,8 +8,12 @@
 
 #import "ShopDetailTableViewController.h"
 #import "ShopIntroduceTableViewCell.h"
+#import "UIImageView+WebCache.h"
 
 @interface ShopDetailTableViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *tableHeaderImageView;
+@property (weak, nonatomic) IBOutlet UICollectionView *tableFooterCollectionView;
 
 @end
 
@@ -17,7 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.tableView.contentInset = UIEdgeInsetsZero;
+    
+    [self fetchImageFilesFromServer];
 }
 
 /*
@@ -35,35 +42,45 @@
  */
 - (void)fetchDataFromServer;
 {
-    self.dataArray = @[@"店铺名称",@"地址",@"电话",@"营业时间",@"店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述"];
+    self.dataArray = @[@"店铺名称",@"地址",@"电话",@"营业时间",@"店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述",
+                       @[@"http://i.stack.imgur.com/T2Rv0.png",@"http://i.stack.imgur.com/FQYYU.png"]];
 }
 
+- (void)fetchImageFilesFromServer;
+{
+    NSArray *imageUrls = self.dataArray.lastObject;
+
+    [self.tableHeaderImageView sd_setImageWithURL:[NSURL URLWithString:imageUrls[1]]];
+    
+}
+
+CGFloat _cellLabelHeight;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row < self.dataArray.count - 1) {
-        return 44;
+    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    NSString *cellName = cell.textLabel.text;
+    if ([cellName isEqualToString:@"详细介绍"])
+    {
+        cell.detailTextLabel.text = self.dataArray[indexPath.row];
+        
+        CGFloat stringWidth = cell.detailTextLabel.attributedText.size.width + 5;
+        CGFloat labelWidth = [UIScreen mainScreen].bounds.size.width - 20;
+        
+        NSUInteger lineNums = 1;
+        if (stringWidth > labelWidth) {
+            lineNums = stringWidth / labelWidth + 1;
+        }
+        if (!_cellLabelHeight) {
+            _cellLabelHeight = cell.detailTextLabel.frame.size.height;
+        }
+        CGFloat height = _cellLabelHeight * lineNums + cell.textLabel.frame.size.height + 20;
+        
+        return height > 44 ? height : 44;
     } else {
-//        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"shopIntroduceCellId"];
-//        cell.detailTextLabel.numberOfLines = 0;
-//        
-//        cell.detailTextLabel.text = self.dataArray[indexPath.row];
-//
-//        CGFloat height = [self heightForLabel:cell.detailTextLabel withText:cell.detailTextLabel.text];
-//        
-//        return height;
-        return 100;
+        return 44;
     }
-}
 
-//-(CGFloat)heightForLabel:(UILabel *)label withText:(NSString *)text{
-//    
-//    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:text attributes:@{NSFontAttributeName:label.font}];
-//    CGRect rect = [attributedText boundingRectWithSize:(CGSize){label.frame.size.width, CGFLOAT_MAX}
-//                                               options:NSStringDrawingUsesLineFragmentOrigin
-//                                               context:nil];
-//    
-//    return ceil(rect.size.height);
-//}
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
