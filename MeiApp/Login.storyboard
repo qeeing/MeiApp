@@ -97,6 +97,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShopImage" id="2Tk-j4-7n0">
+                            <rect key="frame" x="0.0" y="64" width="320" height="93"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <collectionView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="V2v-Bc-Xce">
+                            <rect key="frame" x="0.0" y="421" width="320" height="55"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Saq-Pj-aPG">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
+                            </collectionViewFlowLayout>
+                            <cells>
+                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NHJ-k1-ZqK">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </collectionViewCell>
+                            </cells>
+                        </collectionView>
                         <sections>
                             <tableViewSection id="hxL-Um-HgO">
                                 <cells>
@@ -192,7 +217,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="top" selectionStyle="none" indentationWidth="10" reuseIdentifier="shopIntroduceCellId" textLabel="RAF-9v-60s" detailTextLabel="nOJ-tL-gj2" rowHeight="116" style="IBUITableViewCellStyleSubtitle" id="cpa-Fw-54I">
+                                    <tableViewCell contentMode="top" selectionStyle="none" indentationWidth="10" reuseIdentifier="shopIntroduceCellId" textLabel="RAF-9v-60s" detailTextLabel="nOJ-tL-gj2" rowHeight="44" style="IBUITableViewCellStyleSubtitle" id="cpa-Fw-54I">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cpa-Fw-54I" id="QZB-bR-ymY">
@@ -208,6 +233,20 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="Vz0-9n-AC3" style="IBUITableViewCellStyleDefault" id="rvJ-Br-PK3">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rvJ-Br-PK3" id="7Vq-oM-GqG">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="环境图" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vz0-9n-AC3">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -229,6 +268,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableFooterCollectionView" destination="V2v-Bc-Xce" id="fJE-B7-fte"/>
+                        <outlet property="tableHeaderImageView" destination="2Tk-j4-7n0" id="Pdc-ap-xbb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0iD-9R-vEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -763,6 +806,7 @@
         <image name="PhoneIcon" width="20" height="20"/>
         <image name="ServiceInfo" width="30" height="30"/>
         <image name="ShopIcon" width="20" height="20"/>
+        <image name="ShopImage" width="375" height="208"/>
         <image name="ShopInfo" width="30" height="30"/>
         <image name="TimeIcon" width="20" height="20"/>
     </resources>
