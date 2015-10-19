@@ -16,7 +16,7 @@
 #import "QZStateLabel.h"
 #import "QZSubStateLabel.h"
 #import "QZClearButton.h"
-
+#import "ServiceTableViewCell.h"
 @interface AppDelegate ()
 
 @end
@@ -47,6 +47,8 @@
 //    [[UIButton appearance] setBackgroundImage:nil forState:UIControlStateSelected];
     [UIButton appearanceWhenContainedIn:[RegisterViewController class], nil].backgroundColor = [UIColor whiteColor];
     [UIButton appearanceWhenContainedIn:[ManagerViewController class], nil].backgroundColor = [UIColor whiteColor];
+    [UIButton appearanceWhenContainedIn:[ServiceTableViewCell class], nil].backgroundColor = [UIColor whiteColor];
+    [UIButton appearanceWhenContainedIn:[ServiceTableViewCell class], nil].tintColor = BlackColorForLabel;
     //按钮圆角
     [UIButton appearance].cornerRadius = 4;
     
