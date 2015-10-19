@@ -8,8 +8,12 @@
 
 #import "ShopDetailTableViewController.h"
 #import "ShopIntroduceTableViewCell.h"
+#import "UIImageView+WebCache.h"
 
 @interface ShopDetailTableViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *tableHeaderImageView;
+@property (weak, nonatomic) IBOutlet UICollectionView *tableFooterCollectionView;
 
 @end
 
@@ -17,7 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.tableView.contentInset = UIEdgeInsetsZero;
+    
+    [self fetchImageFilesFromServer];
 }
 
 /*
@@ -35,15 +42,25 @@
  */
 - (void)fetchDataFromServer;
 {
-    self.dataArray = @[@"店铺名称",@"地址",@"电话",@"营业时间",@"店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述"];
+    self.dataArray = @[@"店铺名称",@"地址",@"电话",@"营业时间",@"店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述店铺描述",
+                       @[@"http://i.stack.imgur.com/T2Rv0.png",@"http://i.stack.imgur.com/FQYYU.png"]];
 }
 
+- (void)fetchImageFilesFromServer;
+{
+    NSArray *imageUrls = self.dataArray.lastObject;
+
+    [self.tableHeaderImageView sd_setImageWithURL:[NSURL URLWithString:imageUrls[1]]];
+    
+}
+
+CGFloat _cellLabelHeight;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row < self.dataArray.count - 1) {
-        return 44;
-    } else {
-        UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    NSString *cellName = cell.textLabel.text;
+    if ([cellName isEqualToString:@"详细介绍"])
+    {
         cell.detailTextLabel.text = self.dataArray[indexPath.row];
         
         CGFloat stringWidth = cell.detailTextLabel.attributedText.size.width + 5;
@@ -53,11 +70,16 @@
         if (stringWidth > labelWidth) {
             lineNums = stringWidth / labelWidth + 1;
         }
-        
-        CGFloat height = cell.detailTextLabel.frame.size.height * lineNums + cell.textLabel.frame.size.height + 20;
+        if (!_cellLabelHeight) {
+            _cellLabelHeight = cell.detailTextLabel.frame.size.height;
+        }
+        CGFloat height = _cellLabelHeight * lineNums + cell.textLabel.frame.size.height + 20;
         
         return height > 44 ? height : 44;
+    } else {
+        return 44;
     }
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
