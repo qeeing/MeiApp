@@ -256,6 +256,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsa-jz-Ge7">
+                                <rect key="frame" x="36" y="161" width="249" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="选择城市">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cityPickerButtonPressed:" destination="ci1-dV-DJ2" eventType="touchUpInside" id="S56-vX-fBr"/>
+                                    <segue destination="S6z-04-y2r" kind="show" identifier="cityPickerSegueId" id="FpQ-OS-EIE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -264,13 +276,16 @@
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="width" secondItem="05S-Q9-jBB" secondAttribute="width" id="5Kr-LK-wwL"/>
                             <constraint firstItem="XwM-V8-Fyu" firstAttribute="trailing" secondItem="PbQ-q8-Jzf" secondAttribute="trailing" id="6Zm-8C-sHx"/>
                             <constraint firstItem="s2a-Ri-8lv" firstAttribute="width" secondItem="PbQ-q8-Jzf" secondAttribute="width" id="7bV-3N-VLZ"/>
+                            <constraint firstItem="wsa-jz-Ge7" firstAttribute="top" secondItem="PbQ-q8-Jzf" secondAttribute="bottom" constant="23" id="8eo-9b-GsG"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="top" secondItem="emS-9L-Ba8" secondAttribute="bottom" constant="62" id="Esh-XG-riv"/>
                             <constraint firstItem="CiE-BS-xg8" firstAttribute="leading" secondItem="PbQ-q8-Jzf" secondAttribute="leading" id="Iok-Po-sfU"/>
                             <constraint firstItem="CiE-BS-xg8" firstAttribute="width" secondItem="PbQ-q8-Jzf" secondAttribute="width" id="LVW-LF-3bh"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="05S-Q9-jBB" secondAttribute="leading" id="PjS-xz-0Ag"/>
                             <constraint firstItem="XwM-V8-Fyu" firstAttribute="leading" secondItem="PbQ-q8-Jzf" secondAttribute="leading" id="QWD-FY-qrh"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="emS-9L-Ba8" secondAttribute="bottom" constant="30" id="UXg-NU-kre"/>
+                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="width" secondItem="wsa-jz-Ge7" secondAttribute="width" id="Y5C-p4-QO8"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="ZKJ-Sb-y9l" secondAttribute="leading" id="bSG-ic-F7O"/>
+                            <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="wsa-jz-Ge7" secondAttribute="leading" id="cW2-dG-gpa"/>
                             <constraint firstItem="ZKJ-Sb-y9l" firstAttribute="top" secondItem="PbQ-q8-Jzf" secondAttribute="bottom" constant="125" id="e9p-dq-GkM"/>
                             <constraint firstItem="wzx-rQ-mGk" firstAttribute="top" secondItem="05S-Q9-jBB" secondAttribute="bottom" constant="175" id="hPS-yO-Fcw"/>
                             <constraint firstItem="PbQ-q8-Jzf" firstAttribute="leading" secondItem="PBx-JY-eSv" secondAttribute="leadingMargin" constant="20" id="hy0-8K-0QH"/>
@@ -298,12 +313,48 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="alertLabel" destination="CiE-BS-xg8" id="XHm-LD-tS3"/>
+                        <outlet property="shopAddress" destination="XwM-V8-Fyu" id="25c-9t-Yrn"/>
                         <outlet property="shopName" destination="PbQ-q8-Jzf" id="U0j-BQ-Q8l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cce-vA-5Fu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-713" y="724"/>
+            <point key="canvasLocation" x="-713" y="731"/>
+        </scene>
+        <!--City Picker Table View Controller-->
+        <scene sceneID="MmG-JT-aeh">
+            <objects>
+                <tableViewController id="S6z-04-y2r" customClass="CityPickerTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YGQ-k1-PBK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cityGroupCell" textLabel="d4l-3q-c2j" style="IBUITableViewCellStyleDefault" id="TkF-g6-IS0">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TkF-g6-IS0" id="PHi-6X-zF4">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d4l-3q-c2j">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="S6z-04-y2r" id="QN3-p6-EJU"/>
+                            <outlet property="delegate" destination="S6z-04-y2r" id="I7Z-ES-fj9"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJp-58-sHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-345" y="631"/>
         </scene>
         <!--注册成功-->
         <scene sceneID="M9X-9r-2fA">
@@ -402,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dja-Nh-Qeg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-289" y="724"/>
+            <point key="canvasLocation" x="15" y="731"/>
         </scene>
         <!--审核结果-->
         <scene sceneID="LjC-bL-Y6P">
@@ -439,7 +490,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sz2-xA-gGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="215" y="724"/>
+            <point key="canvasLocation" x="370" y="731"/>
         </scene>
     </scenes>
     <resources>
