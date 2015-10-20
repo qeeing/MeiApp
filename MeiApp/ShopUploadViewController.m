@@ -10,8 +10,10 @@
 #import "UIView+Shake.h"
 @interface ShopUploadViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *shopName;
-
+@property (weak, nonatomic) IBOutlet UITextField *shopAddress;
 @property (weak, nonatomic) IBOutlet UILabel *alertLabel;
+- (IBAction)cityPickerButtonPressed:(id)sender;
+
 @end
 
 @implementation ShopUploadViewController
@@ -65,4 +67,7 @@
 }
 */
 
+- (IBAction)cityPickerButtonPressed:(id)sender {
+    
+}
 @end
