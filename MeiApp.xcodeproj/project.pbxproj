@@ -12,6 +12,11 @@
 		2D424F991BC8F7C000347143 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D424F981BC8F7C000347143 /* RegisterViewController.m */; };
 		2D88910F1BD121FA00C84980 /* OrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB7681BCA0E9D00A83B89 /* OrderTableViewController.m */; };
 		2D8891121BD203B600C84980 /* ShopUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8891111BD203B600C84980 /* ShopUploadViewController.m */; };
+		2DF1780E1BD5320E000D6F29 /* ServiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF1780D1BD5320E000D6F29 /* ServiceTableViewCell.m */; };
+		2DF178161BD60601000D6F29 /* City.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DF178151BD60601000D6F29 /* City.plist */; };
+		2DF178191BD61819000D6F29 /* CityPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF178181BD61819000D6F29 /* CityPickerTableViewController.m */; };
+		2DF1781C1BD61DE1000D6F29 /* CityGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF1781B1BD61DE1000D6F29 /* CityGroup.m */; };
+		2DF1781F1BD61EE9000D6F29 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF1781E1BD61EE9000D6F29 /* City.m */; };
 		BC140C631BCFF05F00ED4251 /* QZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */; };
 		BC140C661BCFF09000ED4251 /* QZBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */; };
 		BC3E97071BD1F88300FE9D54 /* UIButton+QZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */; };
@@ -63,6 +68,15 @@
 		2D424F981BC8F7C000347143 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		2D8891101BD203B600C84980 /* ShopUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopUploadViewController.h; sourceTree = "<group>"; };
 		2D8891111BD203B600C84980 /* ShopUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopUploadViewController.m; sourceTree = "<group>"; };
+		2DF1780C1BD5320E000D6F29 /* ServiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceTableViewCell.h; sourceTree = "<group>"; };
+		2DF1780D1BD5320E000D6F29 /* ServiceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceTableViewCell.m; sourceTree = "<group>"; };
+		2DF178151BD60601000D6F29 /* City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = City.plist; sourceTree = "<group>"; };
+		2DF178171BD61819000D6F29 /* CityPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityPickerTableViewController.h; sourceTree = "<group>"; };
+		2DF178181BD61819000D6F29 /* CityPickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickerTableViewController.m; sourceTree = "<group>"; };
+		2DF1781A1BD61DE1000D6F29 /* CityGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityGroup.h; sourceTree = "<group>"; };
+		2DF1781B1BD61DE1000D6F29 /* CityGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityGroup.m; sourceTree = "<group>"; };
+		2DF1781D1BD61EE9000D6F29 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		2DF1781E1BD61EE9000D6F29 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		2E5C696BC31503D56A4AD969 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		61E18CD07F0564216E423715 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0599511BCFF3F3003622DC /* UIConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstant.h; sourceTree = "<group>"; };
@@ -211,6 +225,8 @@
 				BCBE7F331BCE9D6900A7AABA /* OrderTableViewCell.m */,
 				BC3E97111BD217F600FE9D54 /* ServiceTableViewController.h */,
 				BC3E97121BD217F600FE9D54 /* ServiceTableViewController.m */,
+				2DF1780C1BD5320E000D6F29 /* ServiceTableViewCell.h */,
+				2DF1780D1BD5320E000D6F29 /* ServiceTableViewCell.m */,
 				BC3E971A1BD2198300FE9D54 /* ServiceUploadViewController.h */,
 				BC3E971B1BD2198300FE9D54 /* ServiceUploadViewController.m */,
 				BC6A8E941BC8325900B1297D /* LoginViewController.h */,
@@ -229,6 +245,8 @@
 				2D3F458D1BCFF401005F531B /* RegisteringViewController.m */,
 				2D8891101BD203B600C84980 /* ShopUploadViewController.h */,
 				2D8891111BD203B600C84980 /* ShopUploadViewController.m */,
+				2DF178171BD61819000D6F29 /* CityPickerTableViewController.h */,
+				2DF178181BD61819000D6F29 /* CityPickerTableViewController.m */,
 				BCBBB73A1BC93EE400A83B89 /* RegisterDoneViewController.h */,
 				BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */,
 			);
@@ -264,6 +282,10 @@
 				BCBBB7541BC9972A00A83B89 /* PublicDef.h */,
 				BCBBB75C1BC9992900A83B89 /* NotificationDef.h */,
 				BCBBB7611BC99A0A00A83B89 /* PathConstant.h */,
+				2DF1781A1BD61DE1000D6F29 /* CityGroup.h */,
+				2DF1781B1BD61DE1000D6F29 /* CityGroup.m */,
+				2DF1781D1BD61EE9000D6F29 /* City.h */,
+				2DF1781E1BD61EE9000D6F29 /* City.m */,
 				BCBBB75D1BC999B700A83B89 /* User */,
 			);
 			path = Modal;
@@ -340,6 +362,7 @@
 		BCC599B11BC40AB80004E1A7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2DF178151BD60601000D6F29 /* City.plist */,
 				BCC599B21BC40AB80004E1A7 /* Info.plist */,
 				BCC599B31BC40AB80004E1A7 /* main.m */,
 			);
@@ -446,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC6A8E931BC82E9F00B1297D /* Login.storyboard in Resources */,
+				2DF178161BD60601000D6F29 /* City.plist in Resources */,
 				BCC599BD1BC40AB80004E1A7 /* Register.storyboard in Resources */,
 				BCC599C21BC40AB80004E1A7 /* LaunchScreen.xib in Resources */,
 				BCC599BF1BC40AB80004E1A7 /* Images.xcassets in Resources */,
@@ -499,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF1781F1BD61EE9000D6F29 /* City.m in Sources */,
 				BC3E971C1BD2198300FE9D54 /* ServiceUploadViewController.m in Sources */,
 				BC3E97071BD1F88300FE9D54 /* UIButton+QZAppearance.m in Sources */,
 				BC3E97131BD217F600FE9D54 /* ServiceTableViewController.m in Sources */,
@@ -511,9 +536,11 @@
 				2D8891121BD203B600C84980 /* ShopUploadViewController.m in Sources */,
 				BCBBB75B1BC997CC00A83B89 /* Common.m in Sources */,
 				BCBBB7521BC995E900A83B89 /* UIView+frameAdjust.m in Sources */,
+				2DF1780E1BD5320E000D6F29 /* ServiceTableViewCell.m in Sources */,
 				BCC599B71BC40AB80004E1A7 /* AppDelegate.m in Sources */,
 				BC61E4A01BD2765700F7F40C /* QZNormalLabel.m in Sources */,
 				BCBBB7511BC995E900A83B89 /* CALayer+Additions.m in Sources */,
+				2DF1781C1BD61DE1000D6F29 /* CityGroup.m in Sources */,
 				BC3E970A1BD20D7900FE9D54 /* QZBaseView.m in Sources */,
 				BCBE7F341BCE9D6900A7AABA /* OrderTableViewCell.m in Sources */,
 				BCBBB7501BC995E900A83B89 /* UIImage+QZCompress.m in Sources */,
@@ -522,6 +549,7 @@
 				BC3E97191BD2196400FE9D54 /* ShopEditViewController.m in Sources */,
 				BC61E4AD1BD2A7C300F7F40C /* ShopDetailTableViewController.m in Sources */,
 				BCBBB7661BCA0A7D00A83B89 /* ManagerViewController.m in Sources */,
+				2DF178191BD61819000D6F29 /* CityPickerTableViewController.m in Sources */,
 				BC61E4B01BD2ACEE00F7F40C /* ShopIntroduceTableViewCell.m in Sources */,
 				BC61E4A61BD276AD00F7F40C /* QZSubStateLabel.m in Sources */,
 				BCBBB7601BC999C900A83B89 /* UserInfo.m in Sources */,
