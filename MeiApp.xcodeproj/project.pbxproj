@@ -33,6 +33,7 @@
 		BC61E4B01BD2ACEE00F7F40C /* ShopIntroduceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC61E4AF1BD2ACEE00F7F40C /* ShopIntroduceTableViewCell.m */; };
 		BC6A8E931BC82E9F00B1297D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6A8E921BC82E9F00B1297D /* Login.storyboard */; };
 		BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A8E951BC8325900B1297D /* LoginViewController.m */; };
+		BC6F867B1BD672920095B7B1 /* PopoverOrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6F867A1BD672920095B7B1 /* PopoverOrderTableViewController.m */; };
 		BCBBB73C1BC93EE400A83B89 /* RegisterDoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */; };
 		BCBBB7501BC995E900A83B89 /* UIImage+QZCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB74B1BC995E900A83B89 /* UIImage+QZCompress.m */; };
 		BCBBB7511BC995E900A83B89 /* CALayer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBBB74D1BC995E900A83B89 /* CALayer+Additions.m */; };
@@ -112,6 +113,8 @@
 		BC6A8E921BC82E9F00B1297D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC6A8E941BC8325900B1297D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BC6A8E951BC8325900B1297D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		BC6F86791BD672920095B7B1 /* PopoverOrderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverOrderTableViewController.h; sourceTree = "<group>"; };
+		BC6F867A1BD672920095B7B1 /* PopoverOrderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverOrderTableViewController.m; sourceTree = "<group>"; };
 		BCBBB73A1BC93EE400A83B89 /* RegisterDoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterDoneViewController.h; sourceTree = "<group>"; };
 		BCBBB73B1BC93EE400A83B89 /* RegisterDoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterDoneViewController.m; sourceTree = "<group>"; };
 		BCBBB74A1BC995E900A83B89 /* UIImage+QZCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+QZCompress.h"; sourceTree = "<group>"; };
@@ -223,6 +226,8 @@
 				BCBBB7681BCA0E9D00A83B89 /* OrderTableViewController.m */,
 				BCBE7F321BCE9D6900A7AABA /* OrderTableViewCell.h */,
 				BCBE7F331BCE9D6900A7AABA /* OrderTableViewCell.m */,
+				BC6F86791BD672920095B7B1 /* PopoverOrderTableViewController.h */,
+				BC6F867A1BD672920095B7B1 /* PopoverOrderTableViewController.m */,
 				BC3E97111BD217F600FE9D54 /* ServiceTableViewController.h */,
 				BC3E97121BD217F600FE9D54 /* ServiceTableViewController.m */,
 				2DF1780C1BD5320E000D6F29 /* ServiceTableViewCell.h */,
@@ -547,6 +552,7 @@
 				BC3E97101BD2141B00FE9D54 /* QZBaseTableView.m in Sources */,
 				2D424F991BC8F7C000347143 /* RegisterViewController.m in Sources */,
 				BC3E97191BD2196400FE9D54 /* ShopEditViewController.m in Sources */,
+				BC6F867B1BD672920095B7B1 /* PopoverOrderTableViewController.m in Sources */,
 				BC61E4AD1BD2A7C300F7F40C /* ShopDetailTableViewController.m in Sources */,
 				BCBBB7661BCA0A7D00A83B89 /* ManagerViewController.m in Sources */,
 				2DF178191BD61819000D6F29 /* CityPickerTableViewController.m in Sources */,
