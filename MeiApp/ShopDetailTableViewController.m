@@ -10,7 +10,7 @@
 #import "ShopIntroduceTableViewCell.h"
 #import "UIImageView+WebCache.h"
 
-@interface ShopDetailTableViewController ()
+@interface ShopDetailTableViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UIImageView *tableHeaderImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *tableFooterCollectionView;
@@ -23,6 +23,10 @@
     [super viewDidLoad];
     
     self.tableView.contentInset = UIEdgeInsetsZero;
+    
+    self.tableFooterCollectionView.backgroundColor = [UIColor clearColor];
+    // 注册PictureCell
+    [self.tableFooterCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"shopDetailImageCellId"];
     
     [self fetchImageFilesFromServer];
 }
@@ -89,6 +93,44 @@ CGFloat _cellLabelHeight;
     cell.detailTextLabel.text = self.dataArray[indexPath.row];
     
     return cell;
+}
+
+#pragma mark - UICollectionView DataSource
+
+// section的数量
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+// 每个section的item个数
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 2;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    // UICollectionViewCell内部已经实现了循环使用，所以不用判断为空，直接创建
+    UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"shopDetailImageCellId" forIndexPath:indexPath];
+    
+    NSArray *imageUrls = self.dataArray.lastObject;
+    
+    UIView *view = [cell viewWithTag:99];
+    if ([view isKindOfClass:[UIImageView class]]) {
+        UIImageView *imageView = (UIImageView *)view;
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imageUrls[indexPath.row]]];
+    }
+    
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+// 调用顺序：1，调用次数：item 数
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat itemWidth = 81;
+    CGFloat height = 50;
+    
+    return CGSizeMake(itemWidth, height);
 }
 
 - (void)didReceiveMemoryWarning {
