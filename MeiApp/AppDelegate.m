@@ -17,6 +17,8 @@
 #import "QZSubStateLabel.h"
 #import "QZClearButton.h"
 #import "ServiceTableViewCell.h"
+#import "WYPopoverController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -60,6 +62,15 @@
     [QZNormalLabel appearance].textColor = BlackColorForLabel;
     [QZStateLabel appearance].textColor = YellowColorForLabel;
     [QZSubStateLabel appearance].textColor = GrayColorForFont;
+    
+    //WYPopoverController
+    [WYPopoverController setDefaultTheme:[WYPopoverTheme theme]];
+    WYPopoverBackgroundView *popoverAppearance = [WYPopoverBackgroundView appearance];
+    popoverAppearance.overlayColor = [UIColor clearColor];
+    popoverAppearance.fillTopColor = PinkColorForApp;
+    popoverAppearance.outerCornerRadius = 2;
+    popoverAppearance.arrowBase = 10;
+    popoverAppearance.arrowHeight = 7;
 
 }
 

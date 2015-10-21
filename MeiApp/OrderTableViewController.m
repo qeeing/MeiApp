@@ -9,8 +9,15 @@
 #import "OrderTableViewController.h"
 #import "CALayer+Additions.h"
 #import "OrderTableViewCell.h"
+#import "WYPopoverController.h"
+#import "PopoverOrderTableViewController.h"
+#import "WYStoryboardPopoverSegue.h"
+#import "QZClearButton.h"
 
-@interface OrderTableViewController ()<OrderCellDelegate>
+@interface OrderTableViewController ()<OrderCellDelegate,WYPopoverControllerDelegate,QZPopoverDelegate>
+{
+    WYPopoverController *popoverController;
+}
 
 @end
 
@@ -21,30 +28,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self fetchDataFromServer];
-    
-    // Uncomment the following line to preserve selection between presentations.
-//     self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setRightBarButton];
 }
 
-//- (void)refreshControlHandler
-//{
-//    [self.refreshControl endRefreshing];
-//    
-//    [self fetchDataFromServer];
-//    
-//    [self.tableView reloadData];
-//}
-//
-//- (void)scrollViewDidEndDecelerating:(UIScrollView*)scrollView
-//{
-//    if( self.refreshControl.isRefreshing ) {
-//        [self refreshControlHandler];
-//    }
-//}
+- (void)setRightBarButton
+{
+    QZClearButton *rightButton = [[QZClearButton alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
+    [rightButton setTitle:@"筛选" forState:UIControlStateNormal];
+    rightButton.titleLabel.font = [UIFont systemFontOfSize:17];
+    [rightButton setTitleColor:RedColorForNavigationBar forState:UIControlStateNormal];
+    [rightButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    rightButton.frame = CGRectMake(0, 0, 40, 24);
+    [rightButton addTarget:self action:@selector(selectedButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    self.navigationItem.rightBarButtonItem = rightBarButton;
+}
 
 /*
  "orders":[{"orderid":id,"sumprice":总价,"createtime"：创建时间," serviceid":," servicename":服务名称,"userid":," ordphone":," state": },{}]
@@ -106,15 +104,6 @@
     
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
 /*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -127,34 +116,62 @@
 }
 */
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
-/*
-#pragma mark - Navigation
+//#pragma mark - Navigation
+//
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//}
+
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)selectedButtonPressed:(UIButton *)sender {
+    //生成storyboard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    //通过Identifier找到storyboard中的某个ViewController
+    PopoverOrderTableViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"QZPopoverVCId"];
+    controller.preferredContentSize = CGSizeMake(100, 143);
+    controller.delegate = self;
+    
+    popoverController = [[WYPopoverController alloc] initWithContentViewController:controller];
+    //popover 主题样式在 AppDelegate 中设置
+    popoverController.delegate = self;
+    
+    [popoverController presentPopoverFromRect:sender.bounds
+                                       inView:sender
+                     permittedArrowDirections:WYPopoverArrowDirectionUp
+                                     animated:YES
+                                      options:WYPopoverAnimationOptionFadeWithScale];
+}
+
+- (void)selectedPopoverIndexPath:(NSIndexPath *)indexPath;
+{
+    NSLog(@"indexPath:%@",indexPath);
+    //TODO:根据条件刷选订单
+    
+    [popoverController dismissPopoverAnimated:YES completion:^{
+        [self popoverControllerDidDismissPopover:popoverController];
+    }];
+}
+
+- (BOOL)popoverControllerShouldDismissPopover:(WYPopoverController *)controller
+{
+    return YES;
+}
+
+- (void)popoverControllerDidDismissPopover:(WYPopoverController *)controller
+{
+    popoverController.delegate = nil;
+    popoverController = nil;
 }
 
 @end
