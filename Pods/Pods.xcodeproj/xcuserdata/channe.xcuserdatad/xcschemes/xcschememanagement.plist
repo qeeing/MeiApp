@@ -54,6 +54,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-WYPopoverController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,62 +72,67 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2AAD3961CD877DD551709337</key>
+		<key>1AC240CF52AEBD54249F4D00</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3CD1CA214AA5065AD220FD23</key>
+		<key>3430E40D280E479250073CC0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5DBA8F6FB01E403D0F293EAC</key>
+		<key>569E54DCEF54842DEE8AAB37</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6805EB6AE988FB6D5E7B8638</key>
+		<key>5DD3179CC1B95C3D77BEF75A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>69C479E77A7981A7D78EA4A9</key>
+		<key>6BC9C93F997F5D68ADF079BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9911DE054B88C0A40343B9ED</key>
+		<key>AD2A012F0A6651970A15D832</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>999E11356AD4779F3B02E18D</key>
+		<key>B0A079D08DE7DC468A4356DB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D1E6C6B90E131192B3A634E</key>
+		<key>B7269F1B400671CC75589499</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A391CE2BF61F353970BFF23A</key>
+		<key>B7D27A63DB8D95377B22B9A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BCB08AD903D4F8EDCA0B21A6</key>
+		<key>BB01B32216B2AF1CEA1840DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C73965827D8163226FE71367</key>
+		<key>D8CEBB04FEC92A464BB6B702</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F1AB9D59C591DCC45CBFD706</key>
+		<key>E15AE82B15D4051361D92A14</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB3F05C4B042B4F6FC592659</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -45,6 +45,7 @@ PODS:
   - Shimmer (1.0.2)
   - SSKeychain (1.2.3)
   - UIView+Shake (1.1.0)
+  - WYPopoverController (0.2.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.0)
@@ -58,6 +59,7 @@ DEPENDENCIES:
   - Shimmer (~> 1.0.2)
   - SSKeychain (~> 1.2.3)
   - UIView+Shake (~> 1.1.0)
+  - WYPopoverController (~> 0.2.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
@@ -71,5 +73,6 @@ SPEC CHECKSUMS:
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
   UIView+Shake: 760606e7b497bc553b45b2b443b08b22ae068d1d
+  WYPopoverController: 00d879c25bddd1fd873dcc21aa98c8308d7f1555
 
 COCOAPODS: 0.34.4
