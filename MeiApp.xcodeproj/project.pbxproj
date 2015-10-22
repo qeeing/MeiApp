@@ -19,6 +19,7 @@
 		2DF1781F1BD61EE9000D6F29 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF1781E1BD61EE9000D6F29 /* City.m */; };
 		BC140C631BCFF05F00ED4251 /* QZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */; };
 		BC140C661BCFF09000ED4251 /* QZBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */; };
+		BC30DBC11BD90A99007D464C /* ShopDetailImageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30DBC01BD90A99007D464C /* ShopDetailImageCollectionCell.m */; };
 		BC3E97071BD1F88300FE9D54 /* UIButton+QZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */; };
 		BC3E970A1BD20D7900FE9D54 /* QZBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E97091BD20D7900FE9D54 /* QZBaseView.m */; };
 		BC3E97101BD2141B00FE9D54 /* QZBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E970F1BD2141B00FE9D54 /* QZBaseTableView.m */; };
@@ -30,7 +31,6 @@
 		BC61E4A61BD276AD00F7F40C /* QZSubStateLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC61E4A51BD276AD00F7F40C /* QZSubStateLabel.m */; };
 		BC61E4A91BD27E9400F7F40C /* QZClearButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC61E4A81BD27E9400F7F40C /* QZClearButton.m */; };
 		BC61E4AD1BD2A7C300F7F40C /* ShopDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC61E4AC1BD2A7C300F7F40C /* ShopDetailTableViewController.m */; };
-		BC61E4B01BD2ACEE00F7F40C /* ShopIntroduceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC61E4AF1BD2ACEE00F7F40C /* ShopIntroduceTableViewCell.m */; };
 		BC6A8E931BC82E9F00B1297D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6A8E921BC82E9F00B1297D /* Login.storyboard */; };
 		BC6A8E961BC8325900B1297D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A8E951BC8325900B1297D /* LoginViewController.m */; };
 		BC6F867B1BD672920095B7B1 /* PopoverOrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6F867A1BD672920095B7B1 /* PopoverOrderTableViewController.m */; };
@@ -86,6 +86,8 @@
 		BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseViewController.m; sourceTree = "<group>"; };
 		BC140C641BCFF09000ED4251 /* QZBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZBaseTableViewController.h; sourceTree = "<group>"; };
 		BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseTableViewController.m; sourceTree = "<group>"; };
+		BC30DBBF1BD90A99007D464C /* ShopDetailImageCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopDetailImageCollectionCell.h; sourceTree = "<group>"; };
+		BC30DBC01BD90A99007D464C /* ShopDetailImageCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopDetailImageCollectionCell.m; sourceTree = "<group>"; };
 		BC3E97051BD1F88300FE9D54 /* UIButton+QZAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+QZAppearance.h"; sourceTree = "<group>"; };
 		BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+QZAppearance.m"; sourceTree = "<group>"; };
 		BC3E97081BD20D7900FE9D54 /* QZBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZBaseView.h; sourceTree = "<group>"; };
@@ -108,8 +110,6 @@
 		BC61E4A81BD27E9400F7F40C /* QZClearButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZClearButton.m; sourceTree = "<group>"; };
 		BC61E4AB1BD2A7C300F7F40C /* ShopDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopDetailTableViewController.h; sourceTree = "<group>"; };
 		BC61E4AC1BD2A7C300F7F40C /* ShopDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopDetailTableViewController.m; sourceTree = "<group>"; };
-		BC61E4AE1BD2ACEE00F7F40C /* ShopIntroduceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopIntroduceTableViewCell.h; sourceTree = "<group>"; };
-		BC61E4AF1BD2ACEE00F7F40C /* ShopIntroduceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopIntroduceTableViewCell.m; sourceTree = "<group>"; };
 		BC6A8E921BC82E9F00B1297D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC6A8E941BC8325900B1297D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BC6A8E951BC8325900B1297D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -218,8 +218,8 @@
 				BCBBB7651BCA0A7D00A83B89 /* ManagerViewController.m */,
 				BC61E4AB1BD2A7C300F7F40C /* ShopDetailTableViewController.h */,
 				BC61E4AC1BD2A7C300F7F40C /* ShopDetailTableViewController.m */,
-				BC61E4AE1BD2ACEE00F7F40C /* ShopIntroduceTableViewCell.h */,
-				BC61E4AF1BD2ACEE00F7F40C /* ShopIntroduceTableViewCell.m */,
+				BC30DBBF1BD90A99007D464C /* ShopDetailImageCollectionCell.h */,
+				BC30DBC01BD90A99007D464C /* ShopDetailImageCollectionCell.m */,
 				BC3E97171BD2196400FE9D54 /* ShopEditViewController.h */,
 				BC3E97181BD2196400FE9D54 /* ShopEditViewController.m */,
 				BCBBB7671BCA0E9D00A83B89 /* OrderTableViewController.h */,
@@ -556,8 +556,8 @@
 				BC61E4AD1BD2A7C300F7F40C /* ShopDetailTableViewController.m in Sources */,
 				BCBBB7661BCA0A7D00A83B89 /* ManagerViewController.m in Sources */,
 				2DF178191BD61819000D6F29 /* CityPickerTableViewController.m in Sources */,
-				BC61E4B01BD2ACEE00F7F40C /* ShopIntroduceTableViewCell.m in Sources */,
 				BC61E4A61BD276AD00F7F40C /* QZSubStateLabel.m in Sources */,
+				BC30DBC11BD90A99007D464C /* ShopDetailImageCollectionCell.m in Sources */,
 				BCBBB7601BC999C900A83B89 /* UserInfo.m in Sources */,
 				BC61E4A31BD2768F00F7F40C /* QZStateLabel.m in Sources */,
 				BCBBB73C1BC93EE400A83B89 /* RegisterDoneViewController.m in Sources */,
