@@ -7,8 +7,8 @@
 //
 
 #import "ShopDetailTableViewController.h"
-#import "ShopIntroduceTableViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "ShopDetailImageCollectionCell.h"
 
 @interface ShopDetailTableViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
@@ -24,9 +24,8 @@
     
     self.tableView.contentInset = UIEdgeInsetsZero;
     
-    self.tableFooterCollectionView.backgroundColor = [UIColor clearColor];
-    // 注册PictureCell
-    [self.tableFooterCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"shopDetailImageCellId"];
+    self.tableView.tableFooterView = self.tableFooterCollectionView;
+    self.tableFooterCollectionView.backgroundColor = [UIColor whiteColor];
     
     [self fetchImageFilesFromServer];
 }
@@ -52,9 +51,9 @@
 
 - (void)fetchImageFilesFromServer;
 {
-    NSArray *imageUrls = self.dataArray.lastObject;
+//    NSArray *imageUrls = self.dataArray.lastObject;
 
-    [self.tableHeaderImageView sd_setImageWithURL:[NSURL URLWithString:imageUrls[1]]];
+//    [self.tableHeaderImageView sd_setImageWithURL:[NSURL URLWithString:imageUrls[1]]];
     
 }
 
@@ -104,33 +103,19 @@ CGFloat _cellLabelHeight;
 
 // 每个section的item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 2;
+    return 5;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // UICollectionViewCell内部已经实现了循环使用，所以不用判断为空，直接创建
-    UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"shopDetailImageCellId" forIndexPath:indexPath];
+    ShopDetailImageCollectionCell *cell = (ShopDetailImageCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"shopDetailImageCellId" forIndexPath:indexPath];
     
-    NSArray *imageUrls = self.dataArray.lastObject;
+//    NSArray *imageUrls = self.dataArray.lastObject;
     
-    UIView *view = [cell viewWithTag:99];
-    if ([view isKindOfClass:[UIImageView class]]) {
-        UIImageView *imageView = (UIImageView *)view;
-        [imageView sd_setImageWithURL:[NSURL URLWithString:imageUrls[indexPath.row]]];
-    }
+//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrls[0]]];
+    cell.imageView.image = [UIImage imageNamed:@"ShopImage"];
     
     return cell;
-}
-
-#pragma mark - UICollectionViewDelegateFlowLayout
-// 调用顺序：1，调用次数：item 数
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    CGFloat itemWidth = 81;
-    CGFloat height = 50;
-    
-    return CGSizeMake(itemWidth, height);
 }
 
 - (void)didReceiveMemoryWarning {
