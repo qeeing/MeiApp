@@ -7,10 +7,10 @@
 //
 
 #import "ShopDetailTableViewController.h"
-#import "ShopIntroduceTableViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "ShopDetailImageCollectionCell.h"
 
-@interface ShopDetailTableViewController ()
+@interface ShopDetailTableViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UIImageView *tableHeaderImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *tableFooterCollectionView;
@@ -23,6 +23,9 @@
     [super viewDidLoad];
     
     self.tableView.contentInset = UIEdgeInsetsZero;
+    
+    self.tableView.tableFooterView = self.tableFooterCollectionView;
+    self.tableFooterCollectionView.backgroundColor = [UIColor whiteColor];
     
     [self fetchImageFilesFromServer];
 }
@@ -48,9 +51,9 @@
 
 - (void)fetchImageFilesFromServer;
 {
-    NSArray *imageUrls = self.dataArray.lastObject;
+//    NSArray *imageUrls = self.dataArray.lastObject;
 
-    [self.tableHeaderImageView sd_setImageWithURL:[NSURL URLWithString:imageUrls[1]]];
+//    [self.tableHeaderImageView sd_setImageWithURL:[NSURL URLWithString:imageUrls[1]]];
     
 }
 
@@ -87,6 +90,30 @@ CGFloat _cellLabelHeight;
     UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     
     cell.detailTextLabel.text = self.dataArray[indexPath.row];
+    
+    return cell;
+}
+
+#pragma mark - UICollectionView DataSource
+
+// section的数量
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+// 每个section的item个数
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 5;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ShopDetailImageCollectionCell *cell = (ShopDetailImageCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"shopDetailImageCellId" forIndexPath:indexPath];
+    
+//    NSArray *imageUrls = self.dataArray.lastObject;
+    
+//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrls[0]]];
+    cell.imageView.image = [UIImage imageNamed:@"ShopImage"];
     
     return cell;
 }

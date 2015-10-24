@@ -97,30 +97,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShopImage" id="2Tk-j4-7n0">
-                            <rect key="frame" x="0.0" y="64" width="320" height="93"/>
+                            <rect key="frame" x="0.0" y="64" width="320" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <collectionView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="V2v-Bc-Xce">
-                            <rect key="frame" x="0.0" y="421" width="320" height="55"/>
+                        <collectionView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="V2v-Bc-Xce">
+                            <rect key="frame" x="0.0" y="450" width="320" height="83"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Saq-Pj-aPG">
-                                <size key="itemSize" width="50" height="50"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="4" id="Saq-Pj-aPG">
+                                <size key="itemSize" width="86" height="68"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
+                                <inset key="sectionInset" minX="4" minY="2" maxX="4" maxY="2"/>
                             </collectionViewFlowLayout>
                             <cells>
-                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="shopDetailImageCellId" id="NHJ-k1-ZqK">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="shopDetailImageCellId" id="oGi-H2-NBV" customClass="ShopDetailImageCollectionCell">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2cS-ng-74u">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="68"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="2cS-ng-74u" secondAttribute="trailing" id="1Cg-Nf-Fiw"/>
+                                        <constraint firstAttribute="bottom" secondItem="2cS-ng-74u" secondAttribute="bottom" id="EmC-Ag-7Wf"/>
+                                        <constraint firstItem="2cS-ng-74u" firstAttribute="leading" secondItem="oGi-H2-NBV" secondAttribute="leading" id="KUf-FR-Ibc"/>
+                                        <constraint firstItem="2cS-ng-74u" firstAttribute="top" secondItem="oGi-H2-NBV" secondAttribute="top" id="eZc-EW-zuR"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="imageView" destination="2cS-ng-74u" id="9hc-NU-ObT"/>
+                                    </connections>
                                 </collectionViewCell>
                             </cells>
+                            <connections>
+                                <outlet property="dataSource" destination="AEt-wW-xFe" id="Kdn-zO-vf2"/>
+                                <outlet property="delegate" destination="AEt-wW-xFe" id="CZZ-Vc-5Lq"/>
+                            </connections>
                         </collectionView>
                         <sections>
                             <tableViewSection id="hxL-Um-HgO">
@@ -238,7 +256,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="Vz0-9n-AC3" style="IBUITableViewCellStyleDefault" id="rvJ-Br-PK3">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="Vz0-9n-AC3" rowHeight="32" style="IBUITableViewCellStyleDefault" id="rvJ-Br-PK3">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rvJ-Br-PK3" id="7Vq-oM-GqG">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -275,7 +293,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0iD-9R-vEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="-642"/>
+            <point key="canvasLocation" x="618" y="-632"/>
         </scene>
         <!--编辑店铺信息-->
         <scene sceneID="MFY-5H-iyr">
@@ -288,16 +306,74 @@
                     <view key="view" contentMode="scaleToFill" id="UhD-5D-LUv" customClass="QZBaseView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hm7-WY-hWR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="详细介绍" translatesAutoresizingMaskIntoConstraints="NO" id="HBD-vd-14W">
+                                        <rect key="frame" x="8" y="437" width="304" height="124"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="营业时间" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d02-Rw-cD7">
+                                        <rect key="frame" x="8" y="399" width="304" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="联系方式" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OfN-w8-wA1">
+                                        <rect key="frame" x="8" y="361" width="304" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="所在地区" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2bK-iV-oI1">
+                                        <rect key="frame" x="8" y="323" width="304" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店铺名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pQ6-5m-wui">
+                                        <rect key="frame" x="8" y="285" width="304" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys1-kY-B1a">
+                                        <rect key="frame" x="8" y="574" width="304" height="30"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="上传更多店铺环境照片">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBn-Lb-5lJ">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="200"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvm-gw-nye">
+                                        <rect key="frame" x="93" y="149" width="134" height="30"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="点击上传店铺图片">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hm7-WY-hWR" secondAttribute="trailing" id="07U-2G-Y7u"/>
+                            <constraint firstItem="f3l-Vm-7CA" firstAttribute="top" secondItem="hm7-WY-hWR" secondAttribute="bottom" id="aJp-He-tMT"/>
+                            <constraint firstItem="hm7-WY-hWR" firstAttribute="leading" secondItem="UhD-5D-LUv" secondAttribute="leading" id="l5U-k6-7ht"/>
+                            <constraint firstItem="hm7-WY-hWR" firstAttribute="top" secondItem="UhD-5D-LUv" secondAttribute="top" id="wrF-eK-Kjz"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="编辑店铺" id="OZ9-oT-mwq">
+                    <navigationItem key="navigationItem" title="编辑店铺信息" id="OZ9-oT-mwq">
                         <barButtonItem key="rightBarButtonItem" title="保存" id="Id1-dp-arS"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwN-aU-GXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1193" y="-642"/>
+            <point key="canvasLocation" x="1089" y="-632"/>
         </scene>
         <!--Popover Order Table View Controller-->
         <scene sceneID="r2B-9v-dhw">
