@@ -17,6 +17,49 @@
 
 @implementation LoginViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    //指定本身为代理
+    self.userNameText.delegate = self;
+    self.passwordText.delegate = self;
+    //指定编辑时键盘的return键类型
+    self.userNameText.returnKeyType = UIReturnKeyNext;
+    self.passwordText.returnKeyType = UIReturnKeyDefault;
+    
+    //注册键盘响应事件方法
+    [self.userNameText addTarget:self action:@selector(nextOnKeyboard:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    [self.passwordText addTarget:self action:@selector(nextOnKeyboard:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    //添加手势，点击屏幕其他区域关闭键盘的操作
+//    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hidenKeyboard)];
+//    gesture.numberOfTapsRequired = 1;
+//    [self.view addGestureRecognizer:gesture];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    //导航首页不显示navigationBar
+    //    self.navigationController.navigationBar.hidden = YES;
+//    self.navigationItem.hidesBackButton = YES;
+//        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    //导航次页开始显示navigationBar
+    //    self.navigationController.navigationBar.hidden = NO;
+//    self.navigationItem.hidesBackButton = NO;
+    //    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+}
+
+//点击空白处隐藏键盘，也可用UITapGestureRecognizer实现
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+    //将上移的部分还原
+    [self resumeView];
+}
+
 //UITextField的协议方法，当开始编辑时监听
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
@@ -48,33 +91,6 @@
     }else if (sender == self.passwordText){
         [self hidenKeyboard];
     }
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    //指定本身为代理
-    self.userNameText.delegate = self;
-    self.passwordText.delegate = self;
-    //指定编辑时键盘的return键类型
-    self.userNameText.returnKeyType = UIReturnKeyNext;
-    self.passwordText.returnKeyType = UIReturnKeyDefault;
-    
-    //注册键盘响应事件方法
-    [self.userNameText addTarget:self action:@selector(nextOnKeyboard:) forControlEvents:UIControlEventEditingDidEndOnExit];
-    [self.passwordText addTarget:self action:@selector(nextOnKeyboard:) forControlEvents:UIControlEventEditingDidEndOnExit];
-    
-    //添加手势，点击屏幕其他区域关闭键盘的操作
-//    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hidenKeyboard)];
-//    gesture.numberOfTapsRequired = 1;
-//    [self.view addGestureRecognizer:gesture];
-}
-
-//点击空白处隐藏键盘，也可用UITapGestureRecognizer实现
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self.view endEditing:YES];
-    //将上移的部分还原
-    [self resumeView];
 }
 
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)segue;
