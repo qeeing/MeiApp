@@ -17,6 +17,7 @@
 		2DF178191BD61819000D6F29 /* CityPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF178181BD61819000D6F29 /* CityPickerTableViewController.m */; };
 		2DF1781C1BD61DE1000D6F29 /* CityGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF1781B1BD61DE1000D6F29 /* CityGroup.m */; };
 		2DF1781F1BD61EE9000D6F29 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF1781E1BD61EE9000D6F29 /* City.m */; };
+		2DFB721C1BDB9F4700D4E74D /* UIViewController+QZKeyBoardKeepTextFieldOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB721B1BDB9F4700D4E74D /* UIViewController+QZKeyBoardKeepTextFieldOut.m */; };
 		BC140C631BCFF05F00ED4251 /* QZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C621BCFF05F00ED4251 /* QZBaseViewController.m */; };
 		BC140C661BCFF09000ED4251 /* QZBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC140C651BCFF09000ED4251 /* QZBaseTableViewController.m */; };
 		BC30DBC11BD90A99007D464C /* ShopDetailImageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC30DBC01BD90A99007D464C /* ShopDetailImageCollectionCell.m */; };
@@ -78,6 +79,8 @@
 		2DF1781B1BD61DE1000D6F29 /* CityGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityGroup.m; sourceTree = "<group>"; };
 		2DF1781D1BD61EE9000D6F29 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		2DF1781E1BD61EE9000D6F29 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		2DFB721A1BDB9F4700D4E74D /* UIViewController+QZKeyBoardKeepTextFieldOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+QZKeyBoardKeepTextFieldOut.h"; sourceTree = "<group>"; };
+		2DFB721B1BDB9F4700D4E74D /* UIViewController+QZKeyBoardKeepTextFieldOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+QZKeyBoardKeepTextFieldOut.m"; sourceTree = "<group>"; };
 		2E5C696BC31503D56A4AD969 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		61E18CD07F0564216E423715 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0599511BCFF3F3003622DC /* UIConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstant.h; sourceTree = "<group>"; };
@@ -277,6 +280,8 @@
 				BCBBB74F1BC995E900A83B89 /* UIView+frameAdjust.m */,
 				BC3E97051BD1F88300FE9D54 /* UIButton+QZAppearance.h */,
 				BC3E97061BD1F88300FE9D54 /* UIButton+QZAppearance.m */,
+				2DFB721A1BDB9F4700D4E74D /* UIViewController+QZKeyBoardKeepTextFieldOut.h */,
+				2DFB721B1BDB9F4700D4E74D /* UIViewController+QZKeyBoardKeepTextFieldOut.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 			files = (
 				2DF1781F1BD61EE9000D6F29 /* City.m in Sources */,
 				BC3E971C1BD2198300FE9D54 /* ServiceUploadViewController.m in Sources */,
+				2DFB721C1BDB9F4700D4E74D /* UIViewController+QZKeyBoardKeepTextFieldOut.m in Sources */,
 				BC3E97071BD1F88300FE9D54 /* UIButton+QZAppearance.m in Sources */,
 				BC3E97131BD217F600FE9D54 /* ServiceTableViewController.m in Sources */,
 				2D88910F1BD121FA00C84980 /* OrderTableViewController.m in Sources */,
