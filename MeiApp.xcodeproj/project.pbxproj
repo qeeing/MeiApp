@@ -217,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				BC6A8E921BC82E9F00B1297D /* Login.storyboard */,
+				BC6A8E941BC8325900B1297D /* LoginViewController.h */,
+				BC6A8E951BC8325900B1297D /* LoginViewController.m */,
 				BCBBB7641BCA0A7D00A83B89 /* ManagerViewController.h */,
 				BCBBB7651BCA0A7D00A83B89 /* ManagerViewController.m */,
 				BC61E4AB1BD2A7C300F7F40C /* ShopDetailTableViewController.h */,
@@ -237,8 +239,6 @@
 				2DF1780D1BD5320E000D6F29 /* ServiceTableViewCell.m */,
 				BC3E971A1BD2198300FE9D54 /* ServiceUploadViewController.h */,
 				BC3E971B1BD2198300FE9D54 /* ServiceUploadViewController.m */,
-				BC6A8E941BC8325900B1297D /* LoginViewController.h */,
-				BC6A8E951BC8325900B1297D /* LoginViewController.m */,
 			);
 			name = LoginSucceed;
 			sourceTree = "<group>";
