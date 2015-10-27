@@ -15,11 +15,14 @@
 -(void)resumeView
 {
 
+    [self moveKeyBoard:0.0f];
+}
+
+-(void)moveKeyBoard:(CGFloat)Y{
     [UIView animateWithDuration:0.30f animations:^{
         float width = self.view.frame.size.width;
         float height = self.view.frame.size.height;
-        float Y = 0.0f;
-        CGRect rect=CGRectMake(0.0f,Y,width,height);
+        CGRect rect=CGRectMake(0.0f,-Y,width,height);
         self.view.frame=rect;
     }];
 }

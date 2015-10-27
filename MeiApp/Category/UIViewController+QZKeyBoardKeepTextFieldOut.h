@@ -10,4 +10,5 @@
 
 @interface UIViewController (QZKeyBoardKeepTextFieldOut)
 -(void)resumeView;
+-(void)moveKeyBoard:(CGFloat)Y;
 @end
