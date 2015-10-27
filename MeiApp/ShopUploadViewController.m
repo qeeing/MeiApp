@@ -31,15 +31,7 @@
 //UITextField的协议方法，当开始编辑时监听
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-    NSTimeInterval animationDuration=0.30f;
-    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
-    [UIView setAnimationDuration:animationDuration];
-    float width = self.view.frame.size.width;
-    float height = self.view.frame.size.height;
-    //上移120个单位，按实际情况设置
-    CGRect rect=CGRectMake(0.0f,-40,width,height);
-    self.view.frame=rect;
-    [UIView commitAnimations];
+    [self moveKeyBoard:40.0f];
     return YES;
 }
 

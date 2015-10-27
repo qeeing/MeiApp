@@ -20,14 +20,7 @@
 //UITextField的协议方法，当开始编辑时监听
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-    [UIView animateWithDuration:0.30f animations:^{
-        float width = self.view.frame.size.width;
-        float height = self.view.frame.size.height;
-        //上移120个单位，按实际情况设置
-        CGRect rect=CGRectMake(0.0f,-120,width,height);
-        self.view.frame=rect;
-    }];
-    
+    [self moveKeyBoard:140.0f];
     return YES;
 }
 
